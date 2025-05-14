@@ -13,11 +13,12 @@ def deflate_compress(text):
         original_size = len(data)
 
         start_time = time.time()
-        compressed_data = zlib.compress(data, level=6)
+        compressed_data = zlib.compress(data, level=9)
         compression_time = (time.time() - start_time) * 1000
 
         compressed_size = len(compressed_data)
-        compression_ratio = (compressed_size / original_size * 100) if original_size > 0 else 0
+        # Исправленная формула для процента сжатия
+        compression_ratio = ((original_size - compressed_size) / original_size * 100) if original_size > 0 else 0
 
         return {
             'compressed_bytes': compressed_data,

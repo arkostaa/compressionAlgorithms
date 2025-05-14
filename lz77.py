@@ -1,7 +1,6 @@
+import re
 import math
 import time
-import re
-
 
 def bits_to_bytes(bits):
     """Преобразует список битов в массив байтов."""
@@ -85,22 +84,25 @@ def lz77_compress(text, window_size, buffer_size):
     compressed_bytes = bits_to_bytes(compressed_bits)
 
     end_time = time.time()
-    compression_time = (end_time - start_time) * 1000
+    compression_time = round((end_time - start_time) * 1000)  # миллисекунды, округлено
 
-    # Вычисляем статистику
+    # Статистика
     original_size = len(text.encode('utf-8'))
-    compressed_size = len(compressed_bytes)
-    compression_ratio = ((original_size - compressed_size) / original_size * 100) if original_size > 0 else 0
+    num_triples = len(triples)
+    approx_label_bits = num_triples * (offset_bits_count + length_bits_count + 8)
+    approx_label_bytes = round(approx_label_bits / 8)
+    compression_ratio = round(((original_size - approx_label_bytes) / original_size * 100)) if original_size > 0 else 0
 
     return {
         'compressed_bytes': compressed_bytes,
         'encoded_sequence': " ".join(encoded_sequence),
         'original_size': original_size,
-        'compressed_size': compressed_size,
-        'compression_ratio': compression_ratio,
-        'compression_time': compression_time
+        'compressed_size': approx_label_bytes,  # Округлённый теоретический размер
+        'compression_ratio': compression_ratio,  # В процентах, округлённо
+        'compression_time': compression_time,    # В миллисекундах, округлённо
+        'num_triples': num_triples,
+        'approx_label_bits': approx_label_bits   # Можно тоже округлить, но тут он и так целый
     }
-
 
 def lz77_decompress(compressed_bytes, window_size, buffer_size):
     """

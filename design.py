@@ -40,50 +40,28 @@ class Ui_Dialog(object):
         self.tabWidget.setObjectName("tabWidget")
         self.HuffmanComp = QtWidgets.QWidget()
         self.HuffmanComp.setObjectName("HuffmanComp")
-        self.gridLayout = QtWidgets.QGridLayout(self.HuffmanComp)
-        self.gridLayout.setObjectName("gridLayout")
-        self.status = QtWidgets.QLabel(self.HuffmanComp)
-        self.status.setMinimumSize(QtCore.QSize(0, 30))
-        self.status.setMaximumSize(QtCore.QSize(3000, 30))
-        self.status.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
-        self.status.setText("")
-        self.status.setObjectName("status")
-        self.gridLayout.addWidget(self.status, 13, 0, 1, 1)
-        self.chosenFile = QtWidgets.QLabel(self.HuffmanComp)
-        self.chosenFile.setStyleSheet("\n"
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.HuffmanComp)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem)
+        self.label = QtWidgets.QLabel(self.HuffmanComp)
+        self.label.setStyleSheet("\n"
 "border-radius:3px;\n"
 "color: rgb(201, 216, 197);\n"
 "font: 75 9pt \"Inter\";")
-        self.chosenFile.setObjectName("chosenFile")
-        self.gridLayout.addWidget(self.chosenFile, 9, 0, 1, 1)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem, 10, 0, 1, 1)
-        self.ButtonEnter = QtWidgets.QPushButton(self.HuffmanComp)
-        self.ButtonEnter.setMinimumSize(QtCore.QSize(250, 50))
-        self.ButtonEnter.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.ButtonEnter.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
-        self.ButtonEnter.setObjectName("ButtonEnter")
-        self.gridLayout.addWidget(self.ButtonEnter, 11, 0, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label.setObjectName("label")
+        self.verticalLayout_6.addWidget(self.label)
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.origHuffmanText = QtWidgets.QTextEdit(self.HuffmanComp)
+        self.origHuffmanText.setStyleSheet("color: rgb(255, 255, 255);\n"
+"font: 75 9pt \"Inter\";")
+        self.origHuffmanText.setObjectName("origHuffmanText")
+        self.horizontalLayout_8.addWidget(self.origHuffmanText)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_8)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem1, 12, 0, 1, 1)
+        self.verticalLayout_6.addItem(spacerItem1)
         self.chooseFile = QtWidgets.QPushButton(self.HuffmanComp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -113,27 +91,172 @@ class Ui_Dialog(object):
 "    padding-top: 1 px;\n"
 "}")
         self.chooseFile.setObjectName("chooseFile")
-        self.gridLayout.addWidget(self.chooseFile, 8, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem2, 7, 0, 1, 1)
-        self.label = QtWidgets.QLabel(self.HuffmanComp)
-        self.label.setStyleSheet("\n"
+        self.verticalLayout_6.addWidget(self.chooseFile, 0, QtCore.Qt.AlignHCenter)
+        self.chosenFile = QtWidgets.QLabel(self.HuffmanComp)
+        self.chosenFile.setStyleSheet("\n"
 "border-radius:3px;\n"
 "color: rgb(201, 216, 197);\n"
 "font: 75 9pt \"Inter\";")
-        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        self.origHuffmanText = QtWidgets.QTextEdit(self.HuffmanComp)
-        self.origHuffmanText.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
-        self.origHuffmanText.setObjectName("origHuffmanText")
-        self.horizontalLayout_8.addWidget(self.origHuffmanText)
-        self.gridLayout.addLayout(self.horizontalLayout_8, 6, 0, 1, 1)
+        self.chosenFile.setObjectName("chosenFile")
+        self.verticalLayout_6.addWidget(self.chosenFile)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem2)
+        self.verticalLayout_12 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.ButtonEnter = QtWidgets.QPushButton(self.HuffmanComp)
+        self.ButtonEnter.setMinimumSize(QtCore.QSize(250, 50))
+        self.ButtonEnter.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.ButtonEnter.setStyleSheet("QPushButton {\n"
+"color: rgb(201, 216, 197);\n"
+"background-color: rgb(70, 83, 66);\n"
+"font: 75 16pt \"Inter\";\n"
+"border-radius:5px;\n"
+"display:inline-block;\n"
+"font-weight:bold;\n"
+"padding: 3px 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    background: rgb(71, 85, 67);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"    background: rgb(52, 62, 49);\n"
+"    padding-top: 1 px;\n"
+"}")
+        self.ButtonEnter.setObjectName("ButtonEnter")
+        self.verticalLayout_12.addWidget(self.ButtonEnter, 0, QtCore.Qt.AlignHCenter)
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem3, 0, 0, 1, 1)
+        self.verticalLayout_12.addItem(spacerItem3)
+        self.horizontalLayout_22 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_22.setObjectName("horizontalLayout_22")
+        self.label_38 = QtWidgets.QLabel(self.HuffmanComp)
+        self.label_38.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.label_38.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_38.setObjectName("label_38")
+        self.horizontalLayout_22.addWidget(self.label_38)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_22.addItem(spacerItem4)
+        self.compTimeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
+        self.compTimeHuf.setMaximumSize(QtCore.QSize(100, 20))
+        self.compTimeHuf.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.compTimeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.compTimeHuf.setObjectName("compTimeHuf")
+        self.horizontalLayout_22.addWidget(self.compTimeHuf)
+        self.verticalLayout_12.addLayout(self.horizontalLayout_22)
+        self.horizontalLayout_23 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_23.setObjectName("horizontalLayout_23")
+        self.label_39 = QtWidgets.QLabel(self.HuffmanComp)
+        self.label_39.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_39.setObjectName("label_39")
+        self.horizontalLayout_23.addWidget(self.label_39)
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_23.addItem(spacerItem5)
+        self.OrigSizeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
+        self.OrigSizeHuf.setMaximumSize(QtCore.QSize(100, 20))
+        self.OrigSizeHuf.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.OrigSizeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.OrigSizeHuf.setObjectName("OrigSizeHuf")
+        self.horizontalLayout_23.addWidget(self.OrigSizeHuf)
+        self.verticalLayout_12.addLayout(self.horizontalLayout_23)
+        self.horizontalLayout_24 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_24.setObjectName("horizontalLayout_24")
+        self.label_40 = QtWidgets.QLabel(self.HuffmanComp)
+        self.label_40.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_40.setObjectName("label_40")
+        self.horizontalLayout_24.addWidget(self.label_40)
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_24.addItem(spacerItem6)
+        self.CompSizeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
+        self.CompSizeHuf.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompSizeHuf.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.CompSizeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompSizeHuf.setObjectName("CompSizeHuf")
+        self.horizontalLayout_24.addWidget(self.CompSizeHuf)
+        self.verticalLayout_12.addLayout(self.horizontalLayout_24)
+        self.horizontalLayout_25 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_25.setObjectName("horizontalLayout_25")
+        self.label_41 = QtWidgets.QLabel(self.HuffmanComp)
+        self.label_41.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_41.setObjectName("label_41")
+        self.horizontalLayout_25.addWidget(self.label_41)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_25.addItem(spacerItem7)
+        self.CompPercHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
+        self.CompPercHuf.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompPercHuf.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.CompPercHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompPercHuf.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompPercHuf.setObjectName("CompPercHuf")
+        self.horizontalLayout_25.addWidget(self.CompPercHuf)
+        self.verticalLayout_12.addLayout(self.horizontalLayout_25)
+        self.verticalLayout_6.addLayout(self.verticalLayout_12)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem8)
+        self.status = QtWidgets.QLabel(self.HuffmanComp)
+        self.status.setMinimumSize(QtCore.QSize(0, 30))
+        self.status.setMaximumSize(QtCore.QSize(3000, 30))
+        self.status.setStyleSheet("color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.status.setText("")
+        self.status.setObjectName("status")
+        self.verticalLayout_6.addWidget(self.status)
         self.tabWidget.addTab(self.HuffmanComp, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -215,14 +338,14 @@ class Ui_Dialog(object):
         self.uploaded_files_4.setText("")
         self.uploaded_files_4.setObjectName("uploaded_files_4")
         self.gridLayout_5.addWidget(self.uploaded_files_4, 4, 0, 1, 1)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 62, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem4, 5, 0, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 62, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem5, 0, 0, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 61, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem6, 2, 0, 1, 1)
-        spacerItem7 = QtWidgets.QSpacerItem(20, 61, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem7, 7, 0, 1, 1)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 62, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem9, 5, 0, 1, 1)
+        spacerItem10 = QtWidgets.QSpacerItem(20, 62, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem10, 0, 0, 1, 1)
+        spacerItem11 = QtWidgets.QSpacerItem(20, 61, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem11, 2, 0, 1, 1)
+        spacerItem12 = QtWidgets.QSpacerItem(20, 61, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem12, 7, 0, 1, 1)
         self.status_4 = QtWidgets.QLabel(self.tab_2)
         self.status_4.setMinimumSize(QtCore.QSize(0, 30))
         self.status_4.setMaximumSize(QtCore.QSize(294, 30))
@@ -277,8 +400,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_6.setObjectName("label_6")
         self.buffer.addWidget(self.label_6)
-        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.buffer.addItem(spacerItem8)
+        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.buffer.addItem(spacerItem13)
         self.WindowSize = QtWidgets.QSpinBox(self.tab_4)
         self.WindowSize.setMinimumSize(QtCore.QSize(100, 30))
         self.WindowSize.setStyleSheet("QSpinBox\n"
@@ -310,8 +433,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_9.setObjectName("label_9")
         self.razmerokna.addWidget(self.label_9)
-        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.razmerokna.addItem(spacerItem9)
+        spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.razmerokna.addItem(spacerItem14)
         self.BufferSize = QtWidgets.QSpinBox(self.tab_4)
         self.BufferSize.setMinimumSize(QtCore.QSize(100, 30))
         self.BufferSize.setStyleSheet("QSpinBox\n"
@@ -364,8 +487,8 @@ class Ui_Dialog(object):
         self.compressedResult.setPlainText("")
         self.compressedResult.setObjectName("compressedResult")
         self.verticalLayout.addWidget(self.compressedResult)
-        spacerItem10 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem10)
+        spacerItem15 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem15)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
@@ -377,8 +500,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_13.setObjectName("label_13")
         self.horizontalLayout_4.addWidget(self.label_13)
-        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem11)
+        spacerItem16 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem16)
         self.CompressionTime = QtWidgets.QTextBrowser(self.tab_4)
         self.CompressionTime.setMaximumSize(QtCore.QSize(100, 20))
         self.CompressionTime.setStyleSheet("QTextBrowser\n"
@@ -407,8 +530,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_2.addWidget(self.label_11)
-        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem12)
+        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem17)
         self.originalTextSize = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -442,8 +565,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_10.setObjectName("label_10")
         self.horizontalLayout.addWidget(self.label_10)
-        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem13)
+        spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem18)
         self.compressedTextSize = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -478,8 +601,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_3.addWidget(self.label_12)
-        spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem14)
+        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem19)
         self.CompressionPercentage = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -524,6 +647,7 @@ class Ui_Dialog(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.lz77decompression)
         self.pushButton_2.setMinimumSize(QtCore.QSize(250, 50))
         self.pushButton_2.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.pushButton_2.setToolTipDuration(-2)
         self.pushButton_2.setStyleSheet("QPushButton {\n"
 "color: rgb(201, 216, 197);\n"
 "background-color: rgb(70, 83, 66);\n"
@@ -560,8 +684,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_17.setObjectName("label_17")
         self.horizontalLayout_7.addWidget(self.label_17)
-        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem15)
+        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem20)
         self.decompressionTimeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.decompressionTimeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.decompressionTimeStat.setStyleSheet("QTextBrowser\n"
@@ -590,8 +714,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_16.setObjectName("label_16")
         self.horizontalLayout_6.addWidget(self.label_16)
-        spacerItem16 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem16)
+        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem21)
         self.CompressedSizeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.CompressedSizeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.CompressedSizeStat.setStyleSheet("QTextBrowser\n"
@@ -621,8 +745,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_15.setObjectName("label_15")
         self.horizontalLayout_5.addWidget(self.label_15)
-        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem17)
+        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem22)
         self.DecompressedSizeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.DecompressedSizeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.DecompressedSizeStat.setStyleSheet("QTextBrowser\n"
@@ -648,8 +772,8 @@ class Ui_Dialog(object):
         self.DeflateComp.setObjectName("DeflateComp")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.DeflateComp)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
-        spacerItem18 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem18)
+        spacerItem23 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem23)
         self.label_34 = QtWidgets.QLabel(self.DeflateComp)
         self.label_34.setMaximumSize(QtCore.QSize(16777215, 30))
         self.label_34.setStyleSheet("\n"
@@ -664,8 +788,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.OriginalText_3.setObjectName("OriginalText_3")
         self.verticalLayout_10.addWidget(self.OriginalText_3)
-        spacerItem19 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem19)
+        spacerItem24 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem24)
         self.chooseFile_3 = QtWidgets.QPushButton(self.DeflateComp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -703,8 +827,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.chosenFile_3.setObjectName("chosenFile_3")
         self.verticalLayout_10.addWidget(self.chosenFile_3)
-        spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem20)
+        spacerItem25 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem25)
         self.pushButton_5 = QtWidgets.QPushButton(self.DeflateComp)
         self.pushButton_5.setMinimumSize(QtCore.QSize(250, 50))
         self.pushButton_5.setMaximumSize(QtCore.QSize(200, 16777215))
@@ -740,8 +864,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_33.setObjectName("label_33")
         self.horizontalLayout_18.addWidget(self.label_33)
-        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_18.addItem(spacerItem21)
+        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem26)
         self.compTime = QtWidgets.QTextBrowser(self.DeflateComp)
         self.compTime.setMaximumSize(QtCore.QSize(100, 20))
         self.compTime.setStyleSheet("QTextBrowser\n"
@@ -769,8 +893,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_35.setObjectName("label_35")
         self.horizontalLayout_19.addWidget(self.label_35)
-        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_19.addItem(spacerItem22)
+        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem27)
         self.OrigSize = QtWidgets.QTextBrowser(self.DeflateComp)
         self.OrigSize.setMaximumSize(QtCore.QSize(100, 20))
         self.OrigSize.setStyleSheet("QTextBrowser\n"
@@ -798,8 +922,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_36.setObjectName("label_36")
         self.horizontalLayout_20.addWidget(self.label_36)
-        spacerItem23 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_20.addItem(spacerItem23)
+        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem28)
         self.CompSize = QtWidgets.QTextBrowser(self.DeflateComp)
         self.CompSize.setMaximumSize(QtCore.QSize(100, 20))
         self.CompSize.setStyleSheet("QTextBrowser\n"
@@ -827,8 +951,8 @@ class Ui_Dialog(object):
 "font: 75 9pt \"Inter\";")
         self.label_37.setObjectName("label_37")
         self.horizontalLayout_21.addWidget(self.label_37)
-        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_21.addItem(spacerItem24)
+        spacerItem29 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_21.addItem(spacerItem29)
         self.CompPerc = QtWidgets.QTextBrowser(self.DeflateComp)
         self.CompPerc.setMaximumSize(QtCore.QSize(100, 20))
         self.CompPerc.setStyleSheet("QTextBrowser\n"
@@ -854,8 +978,8 @@ class Ui_Dialog(object):
         self.DeflateDecomp.setObjectName("DeflateDecomp")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.DeflateDecomp)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        spacerItem25 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem25)
+        spacerItem30 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem30)
         self.button_files_5 = QtWidgets.QPushButton(self.DeflateDecomp)
         self.button_files_5.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -886,10 +1010,11 @@ class Ui_Dialog(object):
 "}")
         self.button_files_5.setObjectName("button_files_5")
         self.verticalLayout_5.addWidget(self.button_files_5, 0, QtCore.Qt.AlignHCenter)
-        spacerItem26 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem26)
+        spacerItem31 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem31)
         self.label_18 = QtWidgets.QLabel(self.DeflateDecomp)
-        self.label_18.setMaximumSize(QtCore.QSize(200, 20))
+        self.label_18.setMinimumSize(QtCore.QSize(300, 0))
+        self.label_18.setMaximumSize(QtCore.QSize(300, 20))
         self.label_18.setStyleSheet("\n"
 "border-radius:3px;\n"
 "color: rgb(201, 216, 197);\n"
@@ -907,8 +1032,8 @@ class Ui_Dialog(object):
         self.uploaded_files_5.setText("")
         self.uploaded_files_5.setObjectName("uploaded_files_5")
         self.verticalLayout_5.addWidget(self.uploaded_files_5, 0, QtCore.Qt.AlignHCenter)
-        spacerItem27 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem27)
+        spacerItem32 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem32)
         self.button_decompress_2 = QtWidgets.QPushButton(self.DeflateDecomp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -937,8 +1062,8 @@ class Ui_Dialog(object):
 "}")
         self.button_decompress_2.setObjectName("button_decompress_2")
         self.verticalLayout_5.addWidget(self.button_decompress_2, 0, QtCore.Qt.AlignHCenter)
-        spacerItem28 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem28)
+        spacerItem33 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem33)
         self.status_5 = QtWidgets.QLabel(self.DeflateDecomp)
         self.status_5.setMinimumSize(QtCore.QSize(300, 30))
         self.status_5.setMaximumSize(QtCore.QSize(300, 30))
@@ -948,9 +1073,9 @@ class Ui_Dialog(object):
         self.status_5.setObjectName("status_5")
         self.verticalLayout_5.addWidget(self.status_5, 0, QtCore.Qt.AlignHCenter)
         self.tabWidget.addTab(self.DeflateDecomp, "")
-        self.tab_1 = QtWidgets.QWidget()
-        self.tab_1.setAutoFillBackground(False)
-        self.tab_1.setStyleSheet("QTabBar::tab {\n"
+        self.Brotli = QtWidgets.QWidget()
+        self.Brotli.setAutoFillBackground(False)
+        self.Brotli.setStyleSheet("QTabBar::tab {\n"
 "  background: gray;\n"
 "  color: white;\n"
 "  padding: 10px;\n"
@@ -959,79 +1084,40 @@ class Ui_Dialog(object):
 " QTabBar::tab:selected {\n"
 "  background: lightgray;\n"
 " }")
-        self.tab_1.setObjectName("tab_1")
-        self.gridLayout_3 = QtWidgets.QGridLayout(self.tab_1)
-        self.gridLayout_3.setObjectName("gridLayout_3")
-        self.status_2 = QtWidgets.QLabel(self.tab_1)
-        self.status_2.setMinimumSize(QtCore.QSize(300, 30))
-        self.status_2.setMaximumSize(QtCore.QSize(300, 30))
-        self.status_2.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
-        self.status_2.setText("")
-        self.status_2.setObjectName("status_2")
-        self.gridLayout_3.addWidget(self.status_2, 9, 1, 1, 1)
-        spacerItem29 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem29, 5, 1, 1, 1)
-        self.button_compress_2 = QtWidgets.QPushButton(self.tab_1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.button_compress_2.sizePolicy().hasHeightForWidth())
-        self.button_compress_2.setSizePolicy(sizePolicy)
-        self.button_compress_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.button_compress_2.setMaximumSize(QtCore.QSize(300, 50))
-        self.button_compress_2.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
-        self.button_compress_2.setObjectName("button_compress_2")
-        self.gridLayout_3.addWidget(self.button_compress_2, 6, 1, 1, 1)
-        self.uploaded_files_2 = QtWidgets.QLabel(self.tab_1)
-        self.uploaded_files_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.uploaded_files_2.setMaximumSize(QtCore.QSize(300, 30))
-        self.uploaded_files_2.setStyleSheet("border-color: rgb(78, 139, 119);\n"
-"border: 1px solid  rgb(78, 139, 119);\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
-        self.uploaded_files_2.setText("")
-        self.uploaded_files_2.setScaledContents(False)
-        self.uploaded_files_2.setObjectName("uploaded_files_2")
-        self.gridLayout_3.addWidget(self.uploaded_files_2, 4, 1, 1, 1)
-        spacerItem30 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem30, 7, 1, 1, 1)
-        spacerItem31 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem31, 3, 2, 1, 1)
-        spacerItem32 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem32, 3, 0, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.tab_1)
-        self.label_2.setMaximumSize(QtCore.QSize(300, 30))
+        self.Brotli.setObjectName("Brotli")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.Brotli)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        spacerItem34 = QtWidgets.QSpacerItem(20, 18, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem34)
+        self.label_2 = QtWidgets.QLabel(self.Brotli)
         self.label_2.setStyleSheet("\n"
 "border-radius:3px;\n"
 "color: rgb(201, 216, 197);\n"
 "font: 75 9pt \"Inter\";")
+        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
-        self.gridLayout_3.addWidget(self.label_2, 3, 1, 1, 1)
-        self.button_files_2 = QtWidgets.QPushButton(self.tab_1)
-        self.button_files_2.setEnabled(True)
-        self.button_files_2.setMinimumSize(QtCore.QSize(300, 100))
-        self.button_files_2.setMaximumSize(QtCore.QSize(300, 100))
-        self.button_files_2.setSizeIncrement(QtCore.QSize(0, 0))
-        self.button_files_2.setStyleSheet("QPushButton {\n"
+        self.verticalLayout_7.addWidget(self.label_2)
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.origTextBrotli = QtWidgets.QTextEdit(self.Brotli)
+        self.origTextBrotli.setStyleSheet("color: rgb(255, 255, 255);\n"
+"font: 75 9pt \"Inter\";")
+        self.origTextBrotli.setObjectName("origTextBrotli")
+        self.horizontalLayout_9.addWidget(self.origTextBrotli)
+        self.verticalLayout_7.addLayout(self.horizontalLayout_9)
+        spacerItem35 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem35)
+        self.ChooseFileBrotli = QtWidgets.QPushButton(self.Brotli)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ChooseFileBrotli.sizePolicy().hasHeightForWidth())
+        self.ChooseFileBrotli.setSizePolicy(sizePolicy)
+        self.ChooseFileBrotli.setMinimumSize(QtCore.QSize(250, 50))
+        self.ChooseFileBrotli.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.ChooseFileBrotli.setAcceptDrops(True)
+        self.ChooseFileBrotli.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.ChooseFileBrotli.setStyleSheet("QPushButton {\n"
 "color: rgb(201, 216, 197);\n"
 "background-color: rgb(70, 83, 66);\n"
 "font: 75 16pt \"Inter\";\n"
@@ -1049,50 +1135,212 @@ class Ui_Dialog(object):
 "    background: rgb(52, 62, 49);\n"
 "    padding-top: 1 px;\n"
 "}")
-        self.button_files_2.setObjectName("button_files_2")
-        self.gridLayout_3.addWidget(self.button_files_2, 1, 1, 1, 1)
-        spacerItem33 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem33, 0, 1, 1, 1)
-        spacerItem34 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem34, 2, 1, 1, 1)
-        self.tabWidget.addTab(self.tab_1, "")
-        self.tab = QtWidgets.QWidget()
-        self.tab.setObjectName("tab")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.tab)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        spacerItem35 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem35, 3, 1, 1, 1)
-        spacerItem36 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem36, 6, 1, 1, 1)
+        self.ChooseFileBrotli.setObjectName("ChooseFileBrotli")
+        self.verticalLayout_7.addWidget(self.ChooseFileBrotli, 0, QtCore.Qt.AlignHCenter)
+        self.ChosenFileBrotli = QtWidgets.QLabel(self.Brotli)
+        self.ChosenFileBrotli.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.ChosenFileBrotli.setObjectName("ChosenFileBrotli")
+        self.verticalLayout_7.addWidget(self.ChosenFileBrotli)
+        spacerItem36 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem36)
+        self.ButtonEnterBrotli = QtWidgets.QPushButton(self.Brotli)
+        self.ButtonEnterBrotli.setMinimumSize(QtCore.QSize(250, 50))
+        self.ButtonEnterBrotli.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.ButtonEnterBrotli.setStyleSheet("QPushButton {\n"
+"color: rgb(201, 216, 197);\n"
+"background-color: rgb(70, 83, 66);\n"
+"font: 75 16pt \"Inter\";\n"
+"border-radius:5px;\n"
+"display:inline-block;\n"
+"font-weight:bold;\n"
+"padding: 3px 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    background: rgb(71, 85, 67);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"    background: rgb(52, 62, 49);\n"
+"    padding-top: 1 px;\n"
+"}")
+        self.ButtonEnterBrotli.setObjectName("ButtonEnterBrotli")
+        self.verticalLayout_7.addWidget(self.ButtonEnterBrotli, 0, QtCore.Qt.AlignHCenter)
+        self.verticalLayout_13 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_13.setObjectName("verticalLayout_13")
         spacerItem37 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem37, 9, 1, 1, 1)
-        self.uploaded_files_3 = QtWidgets.QLabel(self.tab)
-        self.uploaded_files_3.setMinimumSize(QtCore.QSize(0, 30))
-        self.uploaded_files_3.setMaximumSize(QtCore.QSize(300, 30))
-        self.uploaded_files_3.setStyleSheet("border-color: rgb(78, 139, 119);\n"
+        self.verticalLayout_13.addItem(spacerItem37)
+        self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_26.setObjectName("horizontalLayout_26")
+        self.label_42 = QtWidgets.QLabel(self.Brotli)
+        self.label_42.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.label_42.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_42.setObjectName("label_42")
+        self.horizontalLayout_26.addWidget(self.label_42)
+        spacerItem38 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_26.addItem(spacerItem38)
+        self.compTimeBrotli = QtWidgets.QTextBrowser(self.Brotli)
+        self.compTimeBrotli.setMaximumSize(QtCore.QSize(100, 20))
+        self.compTimeBrotli.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.compTimeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.compTimeBrotli.setObjectName("compTimeBrotli")
+        self.horizontalLayout_26.addWidget(self.compTimeBrotli)
+        self.verticalLayout_13.addLayout(self.horizontalLayout_26)
+        self.horizontalLayout_27 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_27.setObjectName("horizontalLayout_27")
+        self.label_43 = QtWidgets.QLabel(self.Brotli)
+        self.label_43.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_43.setObjectName("label_43")
+        self.horizontalLayout_27.addWidget(self.label_43)
+        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_27.addItem(spacerItem39)
+        self.OrigSizeBrotli = QtWidgets.QTextBrowser(self.Brotli)
+        self.OrigSizeBrotli.setMaximumSize(QtCore.QSize(100, 20))
+        self.OrigSizeBrotli.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.OrigSizeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.OrigSizeBrotli.setObjectName("OrigSizeBrotli")
+        self.horizontalLayout_27.addWidget(self.OrigSizeBrotli)
+        self.verticalLayout_13.addLayout(self.horizontalLayout_27)
+        self.horizontalLayout_28 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_28.setObjectName("horizontalLayout_28")
+        self.label_44 = QtWidgets.QLabel(self.Brotli)
+        self.label_44.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_44.setObjectName("label_44")
+        self.horizontalLayout_28.addWidget(self.label_44)
+        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_28.addItem(spacerItem40)
+        self.CompSizeBrotli = QtWidgets.QTextBrowser(self.Brotli)
+        self.CompSizeBrotli.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompSizeBrotli.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.CompSizeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompSizeBrotli.setObjectName("CompSizeBrotli")
+        self.horizontalLayout_28.addWidget(self.CompSizeBrotli)
+        self.verticalLayout_13.addLayout(self.horizontalLayout_28)
+        self.horizontalLayout_29 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_29.setObjectName("horizontalLayout_29")
+        self.label_45 = QtWidgets.QLabel(self.Brotli)
+        self.label_45.setStyleSheet("\n"
+"border-radius:3px;\n"
+"color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.label_45.setObjectName("label_45")
+        self.horizontalLayout_29.addWidget(self.label_45)
+        spacerItem41 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_29.addItem(spacerItem41)
+        self.CompPercBrotli = QtWidgets.QTextBrowser(self.Brotli)
+        self.CompPercBrotli.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompPercBrotli.setStyleSheet("QTextBrowser\n"
+"{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser:hover\n"
+"{\n"
+"    border-width: 1px;\n"
+"    border-style: solid;\n"
+"    border-color: gray;\n"
+"}\n"
+"")
+        self.CompPercBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompPercBrotli.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompPercBrotli.setObjectName("CompPercBrotli")
+        self.horizontalLayout_29.addWidget(self.CompPercBrotli)
+        self.verticalLayout_13.addLayout(self.horizontalLayout_29)
+        self.verticalLayout_7.addLayout(self.verticalLayout_13)
+        spacerItem42 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem42)
+        self.status_2 = QtWidgets.QLabel(self.Brotli)
+        self.status_2.setMinimumSize(QtCore.QSize(0, 30))
+        self.status_2.setMaximumSize(QtCore.QSize(3000, 30))
+        self.status_2.setStyleSheet("color: rgb(201, 216, 197);\n"
+"font: 75 9pt \"Inter\";")
+        self.status_2.setText("")
+        self.status_2.setObjectName("status_2")
+        self.verticalLayout_7.addWidget(self.status_2)
+        self.tabWidget.addTab(self.Brotli, "")
+        self.BrotliDecomp = QtWidgets.QWidget()
+        self.BrotliDecomp.setMinimumSize(QtCore.QSize(777, 0))
+        self.BrotliDecomp.setObjectName("BrotliDecomp")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.BrotliDecomp)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        spacerItem43 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem43, 3, 1, 1, 1)
+        spacerItem44 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem44, 6, 1, 1, 1)
+        spacerItem45 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem45, 9, 1, 1, 1)
+        self.uploadedFilesBrotli = QtWidgets.QLabel(self.BrotliDecomp)
+        self.uploadedFilesBrotli.setMinimumSize(QtCore.QSize(0, 30))
+        self.uploadedFilesBrotli.setMaximumSize(QtCore.QSize(300, 30))
+        self.uploadedFilesBrotli.setStyleSheet("border-color: rgb(78, 139, 119);\n"
 "color: rgb(201, 216, 197);\n"
 "border: 1px solid  rgb(78, 139, 119);\n"
 "font: 75 9pt \"Inter\";\n"
 "border-radius:3px;")
-        self.uploaded_files_3.setText("")
-        self.uploaded_files_3.setObjectName("uploaded_files_3")
-        self.gridLayout_4.addWidget(self.uploaded_files_3, 5, 1, 1, 1)
-        self.label_5 = QtWidgets.QLabel(self.tab)
+        self.uploadedFilesBrotli.setText("")
+        self.uploadedFilesBrotli.setObjectName("uploadedFilesBrotli")
+        self.gridLayout_4.addWidget(self.uploadedFilesBrotli, 5, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.BrotliDecomp)
         self.label_5.setMaximumSize(QtCore.QSize(300, 30))
         self.label_5.setStyleSheet("\n"
 "color: rgb(201, 216, 197);\n"
 "font: 75 9pt \"Inter\";")
         self.label_5.setObjectName("label_5")
         self.gridLayout_4.addWidget(self.label_5, 4, 1, 1, 1)
-        self.button_compress_3 = QtWidgets.QPushButton(self.tab)
+        self.buttonDecompBrotli = QtWidgets.QPushButton(self.BrotliDecomp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.button_compress_3.sizePolicy().hasHeightForWidth())
-        self.button_compress_3.setSizePolicy(sizePolicy)
-        self.button_compress_3.setMinimumSize(QtCore.QSize(0, 50))
-        self.button_compress_3.setMaximumSize(QtCore.QSize(300, 50))
-        self.button_compress_3.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.buttonDecompBrotli.sizePolicy().hasHeightForWidth())
+        self.buttonDecompBrotli.setSizePolicy(sizePolicy)
+        self.buttonDecompBrotli.setMinimumSize(QtCore.QSize(0, 50))
+        self.buttonDecompBrotli.setMaximumSize(QtCore.QSize(300, 50))
+        self.buttonDecompBrotli.setStyleSheet("QPushButton {\n"
 "color: rgb(201, 216, 197);\n"
 "background-color: rgb(70, 83, 66);\n"
 "font: 75 16pt \"Inter\";\n"
@@ -1110,22 +1358,22 @@ class Ui_Dialog(object):
 "    background: rgb(52, 62, 49);\n"
 "    padding-top: 1 px;\n"
 "}")
-        self.button_compress_3.setObjectName("button_compress_3")
-        self.gridLayout_4.addWidget(self.button_compress_3, 8, 1, 1, 1)
-        self.status_3 = QtWidgets.QLabel(self.tab)
-        self.status_3.setMinimumSize(QtCore.QSize(300, 30))
-        self.status_3.setMaximumSize(QtCore.QSize(300, 30))
-        self.status_3.setStyleSheet("color: rgb(201, 216, 197);\n"
+        self.buttonDecompBrotli.setObjectName("buttonDecompBrotli")
+        self.gridLayout_4.addWidget(self.buttonDecompBrotli, 8, 1, 1, 1)
+        self.statusBrotli = QtWidgets.QLabel(self.BrotliDecomp)
+        self.statusBrotli.setMinimumSize(QtCore.QSize(300, 30))
+        self.statusBrotli.setMaximumSize(QtCore.QSize(300, 30))
+        self.statusBrotli.setStyleSheet("color: rgb(201, 216, 197);\n"
 "font: 75 9pt \"Inter\";")
-        self.status_3.setText("")
-        self.status_3.setObjectName("status_3")
-        self.gridLayout_4.addWidget(self.status_3, 10, 1, 1, 1)
-        self.button_files_3 = QtWidgets.QPushButton(self.tab)
-        self.button_files_3.setEnabled(True)
-        self.button_files_3.setMinimumSize(QtCore.QSize(300, 100))
-        self.button_files_3.setMaximumSize(QtCore.QSize(300, 100))
-        self.button_files_3.setSizeIncrement(QtCore.QSize(0, 0))
-        self.button_files_3.setStyleSheet("QPushButton {\n"
+        self.statusBrotli.setText("")
+        self.statusBrotli.setObjectName("statusBrotli")
+        self.gridLayout_4.addWidget(self.statusBrotli, 10, 1, 1, 1)
+        self.ChooseFilesBrotli = QtWidgets.QPushButton(self.BrotliDecomp)
+        self.ChooseFilesBrotli.setEnabled(True)
+        self.ChooseFilesBrotli.setMinimumSize(QtCore.QSize(300, 100))
+        self.ChooseFilesBrotli.setMaximumSize(QtCore.QSize(300, 100))
+        self.ChooseFilesBrotli.setSizeIncrement(QtCore.QSize(0, 0))
+        self.ChooseFilesBrotli.setStyleSheet("QPushButton {\n"
 "color: rgb(201, 216, 197);\n"
 "background-color: rgb(70, 83, 66);\n"
 "font: 75 16pt \"Inter\";\n"
@@ -1143,29 +1391,34 @@ class Ui_Dialog(object):
 "    background: rgb(52, 62, 49);\n"
 "    padding-top: 1 px;\n"
 "}")
-        self.button_files_3.setObjectName("button_files_3")
-        self.gridLayout_4.addWidget(self.button_files_3, 2, 1, 1, 1)
-        spacerItem38 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem38, 0, 1, 1, 1)
-        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem39, 5, 0, 1, 1)
-        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem40, 5, 2, 1, 1)
-        self.tabWidget.addTab(self.tab, "")
+        self.ChooseFilesBrotli.setObjectName("ChooseFilesBrotli")
+        self.gridLayout_4.addWidget(self.ChooseFilesBrotli, 2, 1, 1, 1)
+        spacerItem46 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem46, 0, 1, 1, 1)
+        spacerItem47 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem47, 5, 0, 1, 1)
+        spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem48, 5, 2, 1, 1)
+        self.tabWidget.addTab(self.BrotliDecomp, "")
         self.gridLayout_2.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         self.retranslateUi(Dialog)
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.tabWidget.setToolTip(_translate("Dialog", "<html><head/><body><p><br/></p></body></html>"))
         self.HuffmanComp.setWhatsThis(_translate("Dialog", "<html><head/><body><p><br/></p></body></html>"))
+        self.label.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
+        self.chooseFile.setText(_translate("Dialog", "Выберите файл"))
         self.chosenFile.setText(_translate("Dialog", "Выбранный файл:"))
         self.ButtonEnter.setText(_translate("Dialog", "Ввод"))
-        self.chooseFile.setText(_translate("Dialog", "Выберите файл"))
-        self.label.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
+        self.label_38.setText(_translate("Dialog", "Время выполнения сжатия:"))
+        self.label_39.setText(_translate("Dialog", "Размер изначального текста:"))
+        self.label_40.setText(_translate("Dialog", "Размер сжатого текста:"))
+        self.label_41.setText(_translate("Dialog", "Процент сжатия: "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.HuffmanComp), _translate("Dialog", "Huffman"))
         self.button_decompress.setText(_translate("Dialog", "Ввод"))
         self.label_4.setText(_translate("Dialog", "Выбранный файл:"))
@@ -1200,15 +1453,19 @@ class Ui_Dialog(object):
         self.label_18.setText(_translate("Dialog", "Выбранный файл:"))
         self.button_decompress_2.setText(_translate("Dialog", "Ввод"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.DeflateDecomp), _translate("Dialog", "Deflate декомпрессия"))
-        self.button_compress_2.setText(_translate("Dialog", "Сжать"))
-        self.label_2.setText(_translate("Dialog", "Выбранные файлы:"))
-        self.button_files_2.setText(_translate("Dialog", "Выбрать файл или \n"
-"несколько файлов"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("Dialog", "архивация в zip"))
+        self.label_2.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
+        self.ChooseFileBrotli.setText(_translate("Dialog", "Выберите файл"))
+        self.ChosenFileBrotli.setText(_translate("Dialog", "Выбранный файл:"))
+        self.ButtonEnterBrotli.setText(_translate("Dialog", "Ввод"))
+        self.label_42.setText(_translate("Dialog", "Время выполнения сжатия:"))
+        self.label_43.setText(_translate("Dialog", "Размер изначального текста:"))
+        self.label_44.setText(_translate("Dialog", "Размер сжатого текста:"))
+        self.label_45.setText(_translate("Dialog", "Процент сжатия: "))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Brotli), _translate("Dialog", "Brotli компрессия"))
         self.label_5.setText(_translate("Dialog", "Выбранный файл:"))
-        self.button_compress_3.setText(_translate("Dialog", "Распаковать"))
-        self.button_files_3.setText(_translate("Dialog", "Выбрать архив"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "распаковать архив"))
+        self.buttonDecompBrotli.setText(_translate("Dialog", "Ввод"))
+        self.ChooseFilesBrotli.setText(_translate("Dialog", "Выбрать файл"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BrotliDecomp), _translate("Dialog", "Brotli декомпрессия"))
 
 
 if __name__ == "__main__":

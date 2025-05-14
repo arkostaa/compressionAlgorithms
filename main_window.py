@@ -7,6 +7,8 @@ from design import Ui_Dialog
 from huffman_coding import compress as huffman_compress, decompress as huffman_decompress
 from lz77 import lz77_compress, lz77_decompress_from_sequence
 from deflate import deflate_compress, deflate_decompress
+from BrotliComp import brotli_compress, brotli_decompress
+import time
 
 
 class MainWindow(QtWidgets.QDialog):
@@ -17,6 +19,8 @@ class MainWindow(QtWidgets.QDialog):
         self.selected_file_for_huffman_decompress = None
         self.selected_file_for_deflate = None
         self.selected_file_for_deflate_decompress = None
+        self.selected_file_for_brotli = None
+        self.selected_file_for_brotli_decompress = None
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
 
@@ -28,12 +32,6 @@ class MainWindow(QtWidgets.QDialog):
         self.connect_signals()
 
     def connect_signals(self):
-        self.ui.button_files_2.clicked.connect(self.select_files_for_zip)
-        self.ui.button_compress_2.clicked.connect(self.compress_to_zip)
-
-        self.ui.button_files_3.clicked.connect(self.select_zip_file)
-        self.ui.button_compress_3.clicked.connect(self.decompress_zip)
-
         self.ui.chooseFile.clicked.connect(self.select_file_for_huffman)
         self.ui.ButtonEnter.clicked.connect(self.compress_with_huffman)
 
@@ -48,6 +46,12 @@ class MainWindow(QtWidgets.QDialog):
 
         self.ui.button_files_5.clicked.connect(self.select_file_for_deflate_decompress)
         self.ui.button_decompress_2.clicked.connect(self.decompress_with_deflate)
+
+        self.ui.ChooseFileBrotli.clicked.connect(self.select_file_for_brotli)
+        self.ui.ButtonEnterBrotli.clicked.connect(self.compress_with_brotli)
+
+        self.ui.ChooseFilesBrotli.clicked.connect(self.select_file_for_brotli_decompress)
+        self.ui.buttonDecompBrotli.clicked.connect(self.decompress_with_brotli)
 
     def show_error_message(self, title, text, icon):
         """Вспомогательная функция для отображения стилизованных сообщений об ошибках."""
@@ -134,8 +138,13 @@ class MainWindow(QtWidgets.QDialog):
             return
 
         try:
+            start_time = time.time()  # Начало замера времени
+
             if hasattr(self, 'selected_file_for_huffman') and self.selected_file_for_huffman:
+                # Сжатие файла
+                original_size = os.path.getsize(self.selected_file_for_huffman)  # Размер исходного файла
                 huffman_compress(self.selected_file_for_huffman, output_file)
+                compressed_size = os.path.getsize(output_file)  # Размер сжатого файла
                 self.ui.status.setText(f"Файл сжат: {os.path.basename(output_file)}")
             else:
                 text = self.ui.origHuffmanText.toPlainText()
@@ -148,9 +157,23 @@ class MainWindow(QtWidgets.QDialog):
                 with open(temp_input_file, 'w', encoding='utf-8') as f:
                     f.write(text)
 
+                original_size = os.path.getsize(temp_input_file)  # Размер исходного текста
                 huffman_compress(temp_input_file, output_file)
+                compressed_size = os.path.getsize(output_file)  # Размер сжатого файла
                 os.remove(temp_input_file)
                 self.ui.status.setText(f"Текст сжат: {os.path.basename(output_file)}")
+
+            # Вычисление статистики
+            end_time = time.time()
+            compression_time = (end_time - start_time) * 1000  # Время в миллисекундах
+            compression_ratio = (1 - compressed_size / original_size) * 100 if original_size > 0 else 0
+
+            # Обновление интерфейса
+            self.ui.compTimeHuf.setPlainText(f"{compression_time:.2f} мс")
+            self.ui.OrigSizeHuf.setPlainText(f"{original_size} байт")
+            self.ui.CompSizeHuf.setPlainText(f"{compressed_size} байт")
+            self.ui.CompPercHuf.setPlainText(f"{compression_ratio:.2f}%")
+
         except Exception as e:
             self.show_error_message("Ошибка", f"Ошибка при сжатии: {str(e)}", QMessageBox.Critical)
 
@@ -271,7 +294,7 @@ class MainWindow(QtWidgets.QDialog):
 
     def decompress_with_deflate(self):
         if not hasattr(self, 'selected_file_for_deflate_decompress') or not self.selected_file_for_deflate_decompress:
-            self.show_error_message("Ошибка", "С alındı выберите файл!", QMessageBox.Warning)
+            self.show_error_message("Ошибка", "Сначала выберите файл!", QMessageBox.Warning)
             return
 
         output_file, _ = QFileDialog.getSaveFileName(self, "Сохранить разжатый файл", "", "Текстовые файлы (*.txt)")
@@ -287,6 +310,73 @@ class MainWindow(QtWidgets.QDialog):
                 self.ui.status_5.setText(f"Успешная декомпрессия: {os.path.basename(output_file)}")
             except Exception as e:
                 self.show_error_message("Ошибка", f"Ошибка при разжатии Deflate: {str(e)}", QMessageBox.Critical)
+
+    # ========== Brotli функционал ==========
+    def select_file_for_brotli(self):
+        file, _ = QFileDialog.getOpenFileName(self, "Выберите файл для сжатия", "", "Текстовые файлы (*.txt)")
+        if file:
+            self.ui.ChosenFileBrotli.setText(os.path.basename(file))
+            self.selected_file_for_brotli = file
+            self.ui.status_2.setText("Файл выбран")
+            self.ui.origTextBrotli.clear()
+        else:
+            self.ui.status_2.setText("Файл не выбран")
+
+    def compress_with_brotli(self):
+        output_file, _ = QFileDialog.getSaveFileName(self, "Сохранить сжатый файл", "", "Brotli Compressed (*.br)")
+        if not output_file:
+            return
+
+        try:
+            if hasattr(self, 'selected_file_for_brotli') and self.selected_file_for_brotli:
+                # Compress file
+                result = brotli_compress(self.selected_file_for_brotli)
+                self.ui.status_2.setText(f"Файл сжат: {os.path.basename(output_file)}")
+            else:
+                text = self.ui.origTextBrotli.toPlainText()
+                if not text:
+                    self.show_error_message("Ошибка", "Введите текст или выберите файл для сжатия!",
+                                            QMessageBox.Warning)
+                    return
+                # Compress text
+                result = brotli_compress(text)
+
+            # Save compressed data
+            with open(output_file, 'wb') as f:
+                f.write(result['compressed_bytes'])
+
+            # Update UI with statistics
+            self.ui.compTimeBrotli.setPlainText(f"{result['compression_time']:.2f} мс")
+            self.ui.OrigSizeBrotli.setPlainText(f"{result['original_size']} байт")
+            self.ui.CompSizeBrotli.setPlainText(f"{result['compressed_size']} байт")
+            self.ui.CompPercBrotli.setPlainText(f"{result['compression_ratio']:.2f}%")
+
+        except Exception as e:
+            self.show_error_message("Ошибка", f"Ошибка при сжатии Brotli: {str(e)}", QMessageBox.Critical)
+
+    def select_file_for_brotli_decompress(self):
+        file, _ = QFileDialog.getOpenFileName(self, "Выберите файл для разжатия", "", "Brotli Compressed (*.br)")
+        if file:
+            self.ui.uploadedFilesBrotli.setText(os.path.basename(file))
+            self.selected_file_for_brotli_decompress = file
+            self.ui.statusBrotli.setText("Файл выбран")
+        else:
+            self.ui.statusBrotli.setText("Файл не выбран")
+
+    def decompress_with_brotli(self):
+        if not hasattr(self, 'selected_file_for_brotli_decompress') or not self.selected_file_for_brotli_decompress:
+            self.show_error_message("Ошибка", "Сначала выберите файл!", QMessageBox.Warning)
+            return
+
+        output_file, _ = QFileDialog.getSaveFileName(self, "Сохранить разжатый файл", "", "Текстовые файлы (*.txt)")
+        if output_file:
+            try:
+                result = brotli_decompress(self.selected_file_for_brotli_decompress)
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(result['decompressed_text'])
+                self.ui.statusBrotli.setText(f"Успешная декомпрессия: {os.path.basename(output_file)}")
+            except Exception as e:
+                self.show_error_message("Ошибка", f"Ошибка при разжатии Brotli: {str(e)}", QMessageBox.Critical)
 
 
 if __name__ == "__main__":
