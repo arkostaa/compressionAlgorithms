@@ -56,3 +56,5 @@ def brotli_decompress(compressed_file):
         'compressed_size': compressed_size,
         'decompressed_size': decompressed_size
     }
+
+#жека педик
