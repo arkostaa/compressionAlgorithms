@@ -84,7 +84,7 @@ def lz77_compress(text, window_size, buffer_size):
     compressed_bytes = bits_to_bytes(compressed_bits)
 
     end_time = time.time()
-    compression_time = round((end_time - start_time) * 1000)  # миллисекунды, округлено
+    compression_time = round((end_time - start_time) * 1000)
 
     # Статистика
     original_size = len(text.encode('utf-8'))

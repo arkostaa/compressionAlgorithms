@@ -23,19 +23,19 @@ class Ui_Dialog(object):
         self.tabWidget = QtWidgets.QTabWidget(Dialog)
         self.tabWidget.setMinimumSize(QtCore.QSize(300, 0))
         self.tabWidget.setStyleSheet("QTabWidget::tab-bar {\n"
-"border: 1px solid red;\n"
-"}\n"
-"\n"
-"QTabBar::tab {\n"
-"  background: rgb(70, 83, 66);\n"
-"  color: rgb(201, 216, 197);\n"
-"  padding: 10px;\n"
-" }\n"
-"\n"
-" QTabBar::tab:selected {\n"
-"  background: rgb(52, 62, 49);\n"
-" }\n"
-"")
+                                     "border: 1px solid red;\n"
+                                     "}\n"
+                                     "\n"
+                                     "QTabBar::tab {\n"
+                                     "  background: rgb(70, 83, 66);\n"
+                                     "  color: rgb(201, 216, 197);\n"
+                                     "  padding: 10px;\n"
+                                     " }\n"
+                                     "\n"
+                                     " QTabBar::tab:selected {\n"
+                                     "  background: rgb(52, 62, 49);\n"
+                                     " }\n"
+                                     "")
         self.tabWidget.setDocumentMode(True)
         self.tabWidget.setObjectName("tabWidget")
         self.HuffmanComp = QtWidgets.QWidget()
@@ -46,17 +46,18 @@ class Ui_Dialog(object):
         self.verticalLayout_6.addItem(spacerItem)
         self.label = QtWidgets.QLabel(self.HuffmanComp)
         self.label.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
-        self.label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+                                 "border-radius:3px;\n"
+                                 "color: rgb(201, 216, 197);\n"
+                                 "font: 75 9pt \"Inter\";")
+        self.label.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.verticalLayout_6.addWidget(self.label)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.origHuffmanText = QtWidgets.QTextEdit(self.HuffmanComp)
         self.origHuffmanText.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                           "font: 75 9pt \"Inter\";\n"
+                                           "font-color: rgb(255,255,255);")
         self.origHuffmanText.setObjectName("origHuffmanText")
         self.horizontalLayout_8.addWidget(self.origHuffmanText)
         self.verticalLayout_6.addLayout(self.horizontalLayout_8)
@@ -73,30 +74,30 @@ class Ui_Dialog(object):
         self.chooseFile.setAcceptDrops(True)
         self.chooseFile.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.chooseFile.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                      "color: rgb(201, 216, 197);\n"
+                                      "background-color: rgb(70, 83, 66);\n"
+                                      "font: 75 16pt \"Inter\";\n"
+                                      "border-radius:5px;\n"
+                                      "display:inline-block;\n"
+                                      "font-weight:bold;\n"
+                                      "padding: 3px 5px;\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:hover{\n"
+                                      "    background: rgb(71, 85, 67);\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:pressed{\n"
+                                      "    background: rgb(52, 62, 49);\n"
+                                      "    padding-top: 1 px;\n"
+                                      "}")
         self.chooseFile.setObjectName("chooseFile")
         self.verticalLayout_6.addWidget(self.chooseFile, 0, QtCore.Qt.AlignHCenter)
         self.chosenFile = QtWidgets.QLabel(self.HuffmanComp)
         self.chosenFile.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                      "border-radius:3px;\n"
+                                      "color: rgb(201, 216, 197);\n"
+                                      "font: 75 9pt \"Inter\";")
         self.chosenFile.setObjectName("chosenFile")
         self.verticalLayout_6.addWidget(self.chosenFile)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -107,23 +108,23 @@ class Ui_Dialog(object):
         self.ButtonEnter.setMinimumSize(QtCore.QSize(250, 50))
         self.ButtonEnter.setMaximumSize(QtCore.QSize(200, 16777215))
         self.ButtonEnter.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                       "color: rgb(201, 216, 197);\n"
+                                       "background-color: rgb(70, 83, 66);\n"
+                                       "font: 75 16pt \"Inter\";\n"
+                                       "border-radius:5px;\n"
+                                       "display:inline-block;\n"
+                                       "font-weight:bold;\n"
+                                       "padding: 3px 5px;\n"
+                                       "}\n"
+                                       "\n"
+                                       "QPushButton:hover{\n"
+                                       "    background: rgb(71, 85, 67);\n"
+                                       "}\n"
+                                       "\n"
+                                       "QPushButton:pressed{\n"
+                                       "    background: rgb(52, 62, 49);\n"
+                                       "    padding-top: 1 px;\n"
+                                       "}")
         self.ButtonEnter.setObjectName("ButtonEnter")
         self.verticalLayout_12.addWidget(self.ButtonEnter, 0, QtCore.Qt.AlignHCenter)
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -133,9 +134,9 @@ class Ui_Dialog(object):
         self.label_38 = QtWidgets.QLabel(self.HuffmanComp)
         self.label_38.setMaximumSize(QtCore.QSize(16777215, 100))
         self.label_38.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_22.addWidget(self.label_38)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -143,17 +144,17 @@ class Ui_Dialog(object):
         self.compTimeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
         self.compTimeHuf.setMaximumSize(QtCore.QSize(100, 20))
         self.compTimeHuf.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                       "{\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "}\n"
+                                       "\n"
+                                       "QTextBrowser:hover\n"
+                                       "{\n"
+                                       "    border-width: 1px;\n"
+                                       "    border-style: solid;\n"
+                                       "    border-color: gray;\n"
+                                       "}\n"
+                                       "")
         self.compTimeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.compTimeHuf.setObjectName("compTimeHuf")
         self.horizontalLayout_22.addWidget(self.compTimeHuf)
@@ -162,9 +163,9 @@ class Ui_Dialog(object):
         self.horizontalLayout_23.setObjectName("horizontalLayout_23")
         self.label_39 = QtWidgets.QLabel(self.HuffmanComp)
         self.label_39.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_39.setObjectName("label_39")
         self.horizontalLayout_23.addWidget(self.label_39)
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -172,17 +173,17 @@ class Ui_Dialog(object):
         self.OrigSizeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
         self.OrigSizeHuf.setMaximumSize(QtCore.QSize(100, 20))
         self.OrigSizeHuf.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                       "{\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "}\n"
+                                       "\n"
+                                       "QTextBrowser:hover\n"
+                                       "{\n"
+                                       "    border-width: 1px;\n"
+                                       "    border-style: solid;\n"
+                                       "    border-color: gray;\n"
+                                       "}\n"
+                                       "")
         self.OrigSizeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.OrigSizeHuf.setObjectName("OrigSizeHuf")
         self.horizontalLayout_23.addWidget(self.OrigSizeHuf)
@@ -191,9 +192,9 @@ class Ui_Dialog(object):
         self.horizontalLayout_24.setObjectName("horizontalLayout_24")
         self.label_40 = QtWidgets.QLabel(self.HuffmanComp)
         self.label_40.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_40.setObjectName("label_40")
         self.horizontalLayout_24.addWidget(self.label_40)
         spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -201,17 +202,17 @@ class Ui_Dialog(object):
         self.CompSizeHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
         self.CompSizeHuf.setMaximumSize(QtCore.QSize(100, 20))
         self.CompSizeHuf.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                       "{\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "}\n"
+                                       "\n"
+                                       "QTextBrowser:hover\n"
+                                       "{\n"
+                                       "    border-width: 1px;\n"
+                                       "    border-style: solid;\n"
+                                       "    border-color: gray;\n"
+                                       "}\n"
+                                       "")
         self.CompSizeHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompSizeHuf.setObjectName("CompSizeHuf")
         self.horizontalLayout_24.addWidget(self.CompSizeHuf)
@@ -220,9 +221,9 @@ class Ui_Dialog(object):
         self.horizontalLayout_25.setObjectName("horizontalLayout_25")
         self.label_41 = QtWidgets.QLabel(self.HuffmanComp)
         self.label_41.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_41.setObjectName("label_41")
         self.horizontalLayout_25.addWidget(self.label_41)
         spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -230,17 +231,17 @@ class Ui_Dialog(object):
         self.CompPercHuf = QtWidgets.QTextBrowser(self.HuffmanComp)
         self.CompPercHuf.setMaximumSize(QtCore.QSize(100, 20))
         self.CompPercHuf.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                       "{\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "}\n"
+                                       "\n"
+                                       "QTextBrowser:hover\n"
+                                       "{\n"
+                                       "    border-width: 1px;\n"
+                                       "    border-style: solid;\n"
+                                       "    border-color: gray;\n"
+                                       "}\n"
+                                       "")
         self.CompPercHuf.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPercHuf.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPercHuf.setObjectName("CompPercHuf")
@@ -253,7 +254,7 @@ class Ui_Dialog(object):
         self.status.setMinimumSize(QtCore.QSize(0, 30))
         self.status.setMaximumSize(QtCore.QSize(3000, 30))
         self.status.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                  "font: 75 9pt \"Inter\";")
         self.status.setText("")
         self.status.setObjectName("status")
         self.verticalLayout_6.addWidget(self.status)
@@ -271,30 +272,30 @@ class Ui_Dialog(object):
         self.button_decompress.setMinimumSize(QtCore.QSize(0, 50))
         self.button_decompress.setMaximumSize(QtCore.QSize(300, 50))
         self.button_decompress.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                             "color: rgb(201, 216, 197);\n"
+                                             "background-color: rgb(70, 83, 66);\n"
+                                             "font: 75 16pt \"Inter\";\n"
+                                             "border-radius:5px;\n"
+                                             "display:inline-block;\n"
+                                             "font-weight:bold;\n"
+                                             "padding: 3px 5px;\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:hover{\n"
+                                             "    background: rgb(71, 85, 67);\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:pressed{\n"
+                                             "    background: rgb(52, 62, 49);\n"
+                                             "    padding-top: 1 px;\n"
+                                             "}")
         self.button_decompress.setObjectName("button_decompress")
         self.gridLayout_5.addWidget(self.button_decompress, 6, 0, 1, 1)
         self.label_4 = QtWidgets.QLabel(self.tab_2)
         self.label_4.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
         self.label_4.setObjectName("label_4")
         self.gridLayout_5.addWidget(self.label_4, 3, 0, 1, 1)
         self.button_files_4 = QtWidgets.QPushButton(self.tab_2)
@@ -308,33 +309,33 @@ class Ui_Dialog(object):
         self.button_files_4.setMaximumSize(QtCore.QSize(300, 100))
         self.button_files_4.setSizeIncrement(QtCore.QSize(0, 0))
         self.button_files_4.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                          "color: rgb(201, 216, 197);\n"
+                                          "background-color: rgb(70, 83, 66);\n"
+                                          "font: 75 16pt \"Inter\";\n"
+                                          "border-radius:5px;\n"
+                                          "display:inline-block;\n"
+                                          "font-weight:bold;\n"
+                                          "padding: 3px 5px;\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:hover{\n"
+                                          "    background: rgb(71, 85, 67);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:pressed{\n"
+                                          "    background: rgb(52, 62, 49);\n"
+                                          "    padding-top: 1 px;\n"
+                                          "}")
         self.button_files_4.setObjectName("button_files_4")
         self.gridLayout_5.addWidget(self.button_files_4, 1, 0, 1, 1)
         self.uploaded_files_4 = QtWidgets.QLabel(self.tab_2)
         self.uploaded_files_4.setMinimumSize(QtCore.QSize(0, 30))
         self.uploaded_files_4.setMaximumSize(QtCore.QSize(300, 16777215))
         self.uploaded_files_4.setStyleSheet("border-color: rgb(78, 139, 119);\n"
-"color: rgb(201, 216, 197);\n"
-"border: 1px solid  rgb(78, 139, 119);\n"
-"font: 75 9pt \"Inter\";\n"
-"border-radius:3px;")
+                                            "color: rgb(201, 216, 197);\n"
+                                            "border: 1px solid  rgb(78, 139, 119);\n"
+                                            "font: 75 9pt \"Inter\";\n"
+                                            "border-radius:3px;")
         self.uploaded_files_4.setText("")
         self.uploaded_files_4.setObjectName("uploaded_files_4")
         self.gridLayout_5.addWidget(self.uploaded_files_4, 4, 0, 1, 1)
@@ -350,7 +351,7 @@ class Ui_Dialog(object):
         self.status_4.setMinimumSize(QtCore.QSize(0, 30))
         self.status_4.setMaximumSize(QtCore.QSize(294, 30))
         self.status_4.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "font: 75 9pt \"Inter\";")
         self.status_4.setText("")
         self.status_4.setObjectName("status_4")
         self.gridLayout_5.addWidget(self.status_4, 8, 0, 1, 1)
@@ -362,15 +363,15 @@ class Ui_Dialog(object):
         self.label_7 = QtWidgets.QLabel(self.tab_4)
         self.label_7.setMaximumSize(QtCore.QSize(16777215, 30))
         self.label_7.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
         self.label_7.setObjectName("label_7")
         self.verticalLayout.addWidget(self.label_7)
         self.OriginalText = QtWidgets.QTextEdit(self.tab_4)
-        self.OriginalText.setMaximumSize(QtCore.QSize(16777215, 5000))
+        self.OriginalText.setMaximumSize(QtCore.QSize(16777215, 500))
         self.OriginalText.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                        "font: 75 9pt \"Inter\";")
         self.OriginalText.setObjectName("OriginalText")
         self.verticalLayout.addWidget(self.OriginalText)
         self.label_8 = QtWidgets.QLabel(self.tab_4)
@@ -383,9 +384,9 @@ class Ui_Dialog(object):
         font.setWeight(9)
         self.label_8.setFont(font)
         self.label_8.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 12pt \"Inter\";")
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 12pt \"Inter\";")
         self.label_8.setObjectName("label_8")
         self.verticalLayout.addWidget(self.label_8, 0, QtCore.Qt.AlignHCenter)
         self.parametri = QtWidgets.QVBoxLayout()
@@ -395,9 +396,9 @@ class Ui_Dialog(object):
         self.label_6 = QtWidgets.QLabel(self.tab_4)
         self.label_6.setMaximumSize(QtCore.QSize(16777215, 30))
         self.label_6.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
         self.label_6.setObjectName("label_6")
         self.buffer.addWidget(self.label_6)
         spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -405,17 +406,17 @@ class Ui_Dialog(object):
         self.WindowSize = QtWidgets.QSpinBox(self.tab_4)
         self.WindowSize.setMinimumSize(QtCore.QSize(100, 30))
         self.WindowSize.setStyleSheet("QSpinBox\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QSpinBox:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                      "{\n"
+                                      "color: rgb(255, 255, 255);\n"
+                                      "}\n"
+                                      "\n"
+                                      "QSpinBox:hover\n"
+                                      "{\n"
+                                      "    border-width: 1px;\n"
+                                      "    border-style: solid;\n"
+                                      "    border-color: gray;\n"
+                                      "}\n"
+                                      "")
         self.WindowSize.setWrapping(False)
         self.WindowSize.setFrame(True)
         self.WindowSize.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
@@ -428,9 +429,9 @@ class Ui_Dialog(object):
         self.razmerokna.setObjectName("razmerokna")
         self.label_9 = QtWidgets.QLabel(self.tab_4)
         self.label_9.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
         self.label_9.setObjectName("label_9")
         self.razmerokna.addWidget(self.label_9)
         spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -438,17 +439,17 @@ class Ui_Dialog(object):
         self.BufferSize = QtWidgets.QSpinBox(self.tab_4)
         self.BufferSize.setMinimumSize(QtCore.QSize(100, 30))
         self.BufferSize.setStyleSheet("QSpinBox\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QSpinBox:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                      "{\n"
+                                      "color: rgb(255, 255, 255);\n"
+                                      "}\n"
+                                      "\n"
+                                      "QSpinBox:hover\n"
+                                      "{\n"
+                                      "    border-width: 1px;\n"
+                                      "    border-style: solid;\n"
+                                      "    border-color: gray;\n"
+                                      "}\n"
+                                      "")
         self.BufferSize.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.BufferSize.setMaximum(9999)
         self.BufferSize.setProperty("value", 1)
@@ -460,62 +461,65 @@ class Ui_Dialog(object):
         self.pushButton.setMinimumSize(QtCore.QSize(250, 50))
         self.pushButton.setMaximumSize(QtCore.QSize(3000, 16777215))
         self.pushButton.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                      "color: rgb(201, 216, 197);\n"
+                                      "background-color: rgb(70, 83, 66);\n"
+                                      "font: 75 16pt \"Inter\";\n"
+                                      "border-radius:5px;\n"
+                                      "display:inline-block;\n"
+                                      "font-weight:bold;\n"
+                                      "padding: 3px 5px;\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:hover{\n"
+                                      "    background: rgb(71, 85, 67);\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:pressed{\n"
+                                      "    background: rgb(52, 62, 49);\n"
+                                      "    padding-top: 1 px;\n"
+                                      "}")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton, 0, QtCore.Qt.AlignHCenter)
         self.compressedResult = QtWidgets.QPlainTextEdit(self.tab_4)
         self.compressedResult.setEnabled(True)
+        self.compressedResult.setMaximumSize(QtCore.QSize(16777215, 500))
         self.compressedResult.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                            "font: 75 9pt \"Inter\";")
         self.compressedResult.setReadOnly(True)
         self.compressedResult.setPlainText("")
         self.compressedResult.setObjectName("compressedResult")
         self.verticalLayout.addWidget(self.compressedResult)
         spacerItem15 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem15)
+        spacerItem16 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem16)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_13 = QtWidgets.QLabel(self.tab_4)
         self.label_13.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_13.setObjectName("label_13")
         self.horizontalLayout_4.addWidget(self.label_13)
-        spacerItem16 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem16)
+        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem17)
         self.CompressionTime = QtWidgets.QTextBrowser(self.tab_4)
         self.CompressionTime.setMaximumSize(QtCore.QSize(100, 20))
         self.CompressionTime.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                           "{\n"
+                                           "color: rgb(255, 255, 255);\n"
+                                           "}\n"
+                                           "\n"
+                                           "QTextBrowser:hover\n"
+                                           "{\n"
+                                           "    border-width: 1px;\n"
+                                           "    border-style: solid;\n"
+                                           "    border-color: gray;\n"
+                                           "}\n"
+                                           "")
         self.CompressionTime.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressionTime.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressionTime.setObjectName("CompressionTime")
@@ -525,13 +529,13 @@ class Ui_Dialog(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_11 = QtWidgets.QLabel(self.tab_4)
         self.label_11.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_2.addWidget(self.label_11)
-        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem17)
+        spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem18)
         self.originalTextSize = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -540,17 +544,17 @@ class Ui_Dialog(object):
         self.originalTextSize.setSizePolicy(sizePolicy)
         self.originalTextSize.setMaximumSize(QtCore.QSize(100, 20))
         self.originalTextSize.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                            "{\n"
+                                            "color: rgb(255, 255, 255);\n"
+                                            "}\n"
+                                            "\n"
+                                            "QTextBrowser:hover\n"
+                                            "{\n"
+                                            "    border-width: 1px;\n"
+                                            "    border-style: solid;\n"
+                                            "    border-color: gray;\n"
+                                            "}\n"
+                                            "")
         self.originalTextSize.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.originalTextSize.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.originalTextSize.setObjectName("originalTextSize")
@@ -560,13 +564,13 @@ class Ui_Dialog(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label_10 = QtWidgets.QLabel(self.tab_4)
         self.label_10.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_10.setObjectName("label_10")
         self.horizontalLayout.addWidget(self.label_10)
-        spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem18)
+        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem19)
         self.compressedTextSize = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -575,17 +579,17 @@ class Ui_Dialog(object):
         self.compressedTextSize.setSizePolicy(sizePolicy)
         self.compressedTextSize.setMaximumSize(QtCore.QSize(100, 20))
         self.compressedTextSize.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                              "{\n"
+                                              "color: rgb(255, 255, 255);\n"
+                                              "}\n"
+                                              "\n"
+                                              "QTextBrowser:hover\n"
+                                              "{\n"
+                                              "    border-width: 1px;\n"
+                                              "    border-style: solid;\n"
+                                              "    border-color: gray;\n"
+                                              "}\n"
+                                              "")
         self.compressedTextSize.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.compressedTextSize.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.compressedTextSize.setReadOnly(True)
@@ -596,13 +600,13 @@ class Ui_Dialog(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label_12 = QtWidgets.QLabel(self.tab_4)
         self.label_12.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_3.addWidget(self.label_12)
-        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem19)
+        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem20)
         self.CompressionPercentage = QtWidgets.QTextBrowser(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -611,17 +615,17 @@ class Ui_Dialog(object):
         self.CompressionPercentage.setSizePolicy(sizePolicy)
         self.CompressionPercentage.setMaximumSize(QtCore.QSize(100, 20))
         self.CompressionPercentage.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                                 "{\n"
+                                                 "color: rgb(255, 255, 255);\n"
+                                                 "}\n"
+                                                 "\n"
+                                                 "QTextBrowser:hover\n"
+                                                 "{\n"
+                                                 "    border-width: 1px;\n"
+                                                 "    border-style: solid;\n"
+                                                 "    border-color: gray;\n"
+                                                 "}\n"
+                                                 "")
         self.CompressionPercentage.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressionPercentage.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressionPercentage.setObjectName("CompressionPercentage")
@@ -629,48 +633,339 @@ class Ui_Dialog(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
         self.verticalLayout.addLayout(self.verticalLayout_2)
         self.tabWidget.addTab(self.tab_4, "")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.tab)
+        self.verticalLayout_9.setObjectName("verticalLayout_9")
+        self.label_25 = QtWidgets.QLabel(self.tab)
+        self.label_25.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_25.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_25.setObjectName("label_25")
+        self.verticalLayout_9.addWidget(self.label_25)
+        spacerItem21 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem21)
+        self.ChooseFileLZ77 = QtWidgets.QPushButton(self.tab)
+        self.ChooseFileLZ77.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.ChooseFileLZ77.sizePolicy().hasHeightForWidth())
+        self.ChooseFileLZ77.setSizePolicy(sizePolicy)
+        self.ChooseFileLZ77.setMinimumSize(QtCore.QSize(300, 100))
+        self.ChooseFileLZ77.setMaximumSize(QtCore.QSize(300, 100))
+        self.ChooseFileLZ77.setSizeIncrement(QtCore.QSize(0, 0))
+        self.ChooseFileLZ77.setStyleSheet("QPushButton {\n"
+                                          "color: rgb(201, 216, 197);\n"
+                                          "background-color: rgb(70, 83, 66);\n"
+                                          "font: 75 16pt \"Inter\";\n"
+                                          "border-radius:5px;\n"
+                                          "display:inline-block;\n"
+                                          "font-weight:bold;\n"
+                                          "padding: 3px 5px;\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:hover{\n"
+                                          "    background: rgb(71, 85, 67);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:pressed{\n"
+                                          "    background: rgb(52, 62, 49);\n"
+                                          "    padding-top: 1 px;\n"
+                                          "}")
+        self.ChooseFileLZ77.setObjectName("ChooseFileLZ77")
+        self.verticalLayout_9.addWidget(self.ChooseFileLZ77, 0, QtCore.Qt.AlignHCenter)
+        spacerItem22 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem22)
+        self.label_3 = QtWidgets.QLabel(self.tab)
+        self.label_3.setStyleSheet("\n"
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 12pt \"Inter\";")
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout_9.addWidget(self.label_3, 0, QtCore.Qt.AlignHCenter)
+        spacerItem23 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem23)
+        self.parametri_2 = QtWidgets.QVBoxLayout()
+        self.parametri_2.setObjectName("parametri_2")
+        self.buffer_2 = QtWidgets.QHBoxLayout()
+        self.buffer_2.setObjectName("buffer_2")
+        self.label_23 = QtWidgets.QLabel(self.tab)
+        self.label_23.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_23.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_23.setObjectName("label_23")
+        self.buffer_2.addWidget(self.label_23)
+        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.buffer_2.addItem(spacerItem24)
+        self.WindowSize_File = QtWidgets.QSpinBox(self.tab)
+        self.WindowSize_File.setMinimumSize(QtCore.QSize(100, 30))
+        self.WindowSize_File.setStyleSheet("QSpinBox\n"
+                                           "{\n"
+                                           "color: rgb(255, 255, 255);\n"
+                                           "}\n"
+                                           "\n"
+                                           "QSpinBox:hover\n"
+                                           "{\n"
+                                           "    border-width: 1px;\n"
+                                           "    border-style: solid;\n"
+                                           "    border-color: gray;\n"
+                                           "}\n"
+                                           "")
+        self.WindowSize_File.setWrapping(False)
+        self.WindowSize_File.setFrame(True)
+        self.WindowSize_File.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.WindowSize_File.setMaximum(9999)
+        self.WindowSize_File.setProperty("value", 1)
+        self.WindowSize_File.setObjectName("WindowSize_File")
+        self.buffer_2.addWidget(self.WindowSize_File)
+        self.parametri_2.addLayout(self.buffer_2)
+        self.razmerokna_2 = QtWidgets.QHBoxLayout()
+        self.razmerokna_2.setObjectName("razmerokna_2")
+        self.label_24 = QtWidgets.QLabel(self.tab)
+        self.label_24.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_24.setObjectName("label_24")
+        self.razmerokna_2.addWidget(self.label_24)
+        spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.razmerokna_2.addItem(spacerItem25)
+        self.BufferSize_File = QtWidgets.QSpinBox(self.tab)
+        self.BufferSize_File.setMinimumSize(QtCore.QSize(100, 30))
+        self.BufferSize_File.setStyleSheet("QSpinBox\n"
+                                           "{\n"
+                                           "color: rgb(255, 255, 255);\n"
+                                           "}\n"
+                                           "\n"
+                                           "QSpinBox:hover\n"
+                                           "{\n"
+                                           "    border-width: 1px;\n"
+                                           "    border-style: solid;\n"
+                                           "    border-color: gray;\n"
+                                           "}\n"
+                                           "")
+        self.BufferSize_File.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.BufferSize_File.setMaximum(9999)
+        self.BufferSize_File.setProperty("value", 1)
+        self.BufferSize_File.setObjectName("BufferSize_File")
+        self.razmerokna_2.addWidget(self.BufferSize_File)
+        self.parametri_2.addLayout(self.razmerokna_2)
+        self.verticalLayout_9.addLayout(self.parametri_2)
+        spacerItem26 = QtWidgets.QSpacerItem(20, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem26)
+        self.ButtonLZ77 = QtWidgets.QPushButton(self.tab)
+        self.ButtonLZ77.setMinimumSize(QtCore.QSize(300, 50))
+        self.ButtonLZ77.setMaximumSize(QtCore.QSize(3000, 16777215))
+        self.ButtonLZ77.setStyleSheet("QPushButton {\n"
+                                      "color: rgb(201, 216, 197);\n"
+                                      "background-color: rgb(70, 83, 66);\n"
+                                      "font: 75 16pt \"Inter\";\n"
+                                      "border-radius:5px;\n"
+                                      "display:inline-block;\n"
+                                      "font-weight:bold;\n"
+                                      "padding: 3px 5px;\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:hover{\n"
+                                      "    background: rgb(71, 85, 67);\n"
+                                      "}\n"
+                                      "\n"
+                                      "QPushButton:pressed{\n"
+                                      "    background: rgb(52, 62, 49);\n"
+                                      "    padding-top: 1 px;\n"
+                                      "}")
+        self.ButtonLZ77.setObjectName("ButtonLZ77")
+        self.verticalLayout_9.addWidget(self.ButtonLZ77, 0, QtCore.Qt.AlignHCenter)
+        spacerItem27 = QtWidgets.QSpacerItem(20, 47, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem27)
+        self.verticalLayout_8 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_8.setObjectName("verticalLayout_8")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.label_19 = QtWidgets.QLabel(self.tab)
+        self.label_19.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_19.setObjectName("label_19")
+        self.horizontalLayout_10.addWidget(self.label_19)
+        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_10.addItem(spacerItem28)
+        self.CompressionTime_File = QtWidgets.QTextBrowser(self.tab)
+        self.CompressionTime_File.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompressionTime_File.setStyleSheet("QTextBrowser\n"
+                                                "{\n"
+                                                "color: rgb(255, 255, 255);\n"
+                                                "}\n"
+                                                "\n"
+                                                "QTextBrowser:hover\n"
+                                                "{\n"
+                                                "    border-width: 1px;\n"
+                                                "    border-style: solid;\n"
+                                                "    border-color: gray;\n"
+                                                "}\n"
+                                                "")
+        self.CompressionTime_File.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompressionTime_File.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompressionTime_File.setObjectName("CompressionTime_File")
+        self.horizontalLayout_10.addWidget(self.CompressionTime_File)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_10)
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.label_20 = QtWidgets.QLabel(self.tab)
+        self.label_20.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_20.setObjectName("label_20")
+        self.horizontalLayout_11.addWidget(self.label_20)
+        spacerItem29 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_11.addItem(spacerItem29)
+        self.originalTextSize_File = QtWidgets.QTextBrowser(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.originalTextSize_File.sizePolicy().hasHeightForWidth())
+        self.originalTextSize_File.setSizePolicy(sizePolicy)
+        self.originalTextSize_File.setMaximumSize(QtCore.QSize(100, 20))
+        self.originalTextSize_File.setStyleSheet("QTextBrowser\n"
+                                                 "{\n"
+                                                 "color: rgb(255, 255, 255);\n"
+                                                 "}\n"
+                                                 "\n"
+                                                 "QTextBrowser:hover\n"
+                                                 "{\n"
+                                                 "    border-width: 1px;\n"
+                                                 "    border-style: solid;\n"
+                                                 "    border-color: gray;\n"
+                                                 "}\n"
+                                                 "")
+        self.originalTextSize_File.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.originalTextSize_File.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.originalTextSize_File.setObjectName("originalTextSize_File")
+        self.horizontalLayout_11.addWidget(self.originalTextSize_File)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_11)
+        self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_12.setObjectName("horizontalLayout_12")
+        self.label_21 = QtWidgets.QLabel(self.tab)
+        self.label_21.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_21.setObjectName("label_21")
+        self.horizontalLayout_12.addWidget(self.label_21)
+        spacerItem30 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem30)
+        self.compressedTextSize_File = QtWidgets.QTextBrowser(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.compressedTextSize_File.sizePolicy().hasHeightForWidth())
+        self.compressedTextSize_File.setSizePolicy(sizePolicy)
+        self.compressedTextSize_File.setMaximumSize(QtCore.QSize(100, 20))
+        self.compressedTextSize_File.setStyleSheet("QTextBrowser\n"
+                                                   "{\n"
+                                                   "color: rgb(255, 255, 255);\n"
+                                                   "}\n"
+                                                   "\n"
+                                                   "QTextBrowser:hover\n"
+                                                   "{\n"
+                                                   "    border-width: 1px;\n"
+                                                   "    border-style: solid;\n"
+                                                   "    border-color: gray;\n"
+                                                   "}\n"
+                                                   "")
+        self.compressedTextSize_File.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.compressedTextSize_File.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.compressedTextSize_File.setReadOnly(True)
+        self.compressedTextSize_File.setObjectName("compressedTextSize_File")
+        self.horizontalLayout_12.addWidget(self.compressedTextSize_File)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_12)
+        self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
+        self.label_22 = QtWidgets.QLabel(self.tab)
+        self.label_22.setStyleSheet("\n"
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
+        self.label_22.setObjectName("label_22")
+        self.horizontalLayout_13.addWidget(self.label_22)
+        spacerItem31 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem31)
+        self.CompressionPercentage_File = QtWidgets.QTextBrowser(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.CompressionPercentage_File.sizePolicy().hasHeightForWidth())
+        self.CompressionPercentage_File.setSizePolicy(sizePolicy)
+        self.CompressionPercentage_File.setMaximumSize(QtCore.QSize(100, 20))
+        self.CompressionPercentage_File.setStyleSheet("QTextBrowser\n"
+                                                      "{\n"
+                                                      "color: rgb(255, 255, 255);\n"
+                                                      "}\n"
+                                                      "\n"
+                                                      "QTextBrowser:hover\n"
+                                                      "{\n"
+                                                      "    border-width: 1px;\n"
+                                                      "    border-style: solid;\n"
+                                                      "    border-color: gray;\n"
+                                                      "}\n"
+                                                      "")
+        self.CompressionPercentage_File.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompressionPercentage_File.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.CompressionPercentage_File.setObjectName("CompressionPercentage_File")
+        self.horizontalLayout_13.addWidget(self.CompressionPercentage_File)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_13)
+        self.verticalLayout_9.addLayout(self.verticalLayout_8)
+        spacerItem32 = QtWidgets.QSpacerItem(20, 48, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_9.addItem(spacerItem32)
+        self.tabWidget.addTab(self.tab, "")
         self.lz77decompression = QtWidgets.QWidget()
         self.lz77decompression.setObjectName("lz77decompression")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.lz77decompression)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_14 = QtWidgets.QLabel(self.lz77decompression)
         self.label_14.setStyleSheet("border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_14.setObjectName("label_14")
         self.verticalLayout_3.addWidget(self.label_14)
         self.compressedText = QtWidgets.QTextEdit(self.lz77decompression)
         self.compressedText.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                          "font: 75 9pt \"Inter\";")
         self.compressedText.setObjectName("compressedText")
         self.verticalLayout_3.addWidget(self.compressedText)
         self.pushButton_2 = QtWidgets.QPushButton(self.lz77decompression)
         self.pushButton_2.setMinimumSize(QtCore.QSize(250, 50))
         self.pushButton_2.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.pushButton_2.setToolTipDuration(-2)
         self.pushButton_2.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                        "color: rgb(201, 216, 197);\n"
+                                        "background-color: rgb(70, 83, 66);\n"
+                                        "font: 75 16pt \"Inter\";\n"
+                                        "border-radius:5px;\n"
+                                        "display:inline-block;\n"
+                                        "font-weight:bold;\n"
+                                        "padding: 3px 5px;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:hover{\n"
+                                        "    background: rgb(71, 85, 67);\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:pressed{\n"
+                                        "    background: rgb(52, 62, 49);\n"
+                                        "    padding-top: 1 px;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_3.addWidget(self.pushButton_2, 0, QtCore.Qt.AlignHCenter)
         self.decompressedText = QtWidgets.QTextEdit(self.lz77decompression)
         self.decompressedText.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                            "font: 75 9pt \"Inter\";")
         self.decompressedText.setObjectName("decompressedText")
         self.verticalLayout_3.addWidget(self.decompressedText)
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
@@ -679,27 +974,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.label_17 = QtWidgets.QLabel(self.lz77decompression)
         self.label_17.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_17.setObjectName("label_17")
         self.horizontalLayout_7.addWidget(self.label_17)
-        spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem20)
+        spacerItem33 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem33)
         self.decompressionTimeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.decompressionTimeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.decompressionTimeStat.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                                 "{\n"
+                                                 "color: rgb(255, 255, 255);\n"
+                                                 "}\n"
+                                                 "\n"
+                                                 "QTextBrowser:hover\n"
+                                                 "{\n"
+                                                 "    border-width: 1px;\n"
+                                                 "    border-style: solid;\n"
+                                                 "    border-color: gray;\n"
+                                                 "}\n"
+                                                 "")
         self.decompressionTimeStat.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.decompressionTimeStat.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.decompressionTimeStat.setObjectName("decompressionTimeStat")
@@ -709,27 +1004,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.label_16 = QtWidgets.QLabel(self.lz77decompression)
         self.label_16.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_16.setObjectName("label_16")
         self.horizontalLayout_6.addWidget(self.label_16)
-        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem21)
+        spacerItem34 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem34)
         self.CompressedSizeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.CompressedSizeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.CompressedSizeStat.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                              "{\n"
+                                              "color: rgb(255, 255, 255);\n"
+                                              "}\n"
+                                              "\n"
+                                              "QTextBrowser:hover\n"
+                                              "{\n"
+                                              "    border-width: 1px;\n"
+                                              "    border-style: solid;\n"
+                                              "    border-color: gray;\n"
+                                              "}\n"
+                                              "")
         self.CompressedSizeStat.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressedSizeStat.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompressedSizeStat.setObjectName("CompressedSizeStat")
@@ -740,27 +1035,27 @@ class Ui_Dialog(object):
         self.label_15 = QtWidgets.QLabel(self.lz77decompression)
         self.label_15.setMaximumSize(QtCore.QSize(16777215, 20))
         self.label_15.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_15.setObjectName("label_15")
         self.horizontalLayout_5.addWidget(self.label_15)
-        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem22)
+        spacerItem35 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem35)
         self.DecompressedSizeStat = QtWidgets.QTextBrowser(self.lz77decompression)
         self.DecompressedSizeStat.setMaximumSize(QtCore.QSize(100, 20))
         self.DecompressedSizeStat.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                                "{\n"
+                                                "color: rgb(255, 255, 255);\n"
+                                                "}\n"
+                                                "\n"
+                                                "QTextBrowser:hover\n"
+                                                "{\n"
+                                                "    border-width: 1px;\n"
+                                                "    border-style: solid;\n"
+                                                "    border-color: gray;\n"
+                                                "}\n"
+                                                "")
         self.DecompressedSizeStat.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.DecompressedSizeStat.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.DecompressedSizeStat.setObjectName("DecompressedSizeStat")
@@ -772,24 +1067,24 @@ class Ui_Dialog(object):
         self.DeflateComp.setObjectName("DeflateComp")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.DeflateComp)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
-        spacerItem23 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem23)
+        spacerItem36 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem36)
         self.label_34 = QtWidgets.QLabel(self.DeflateComp)
         self.label_34.setMaximumSize(QtCore.QSize(16777215, 30))
         self.label_34.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_34.setObjectName("label_34")
         self.verticalLayout_10.addWidget(self.label_34)
         self.OriginalText_3 = QtWidgets.QTextEdit(self.DeflateComp)
         self.OriginalText_3.setMaximumSize(QtCore.QSize(16777215, 300))
         self.OriginalText_3.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                          "font: 75 9pt \"Inter\";")
         self.OriginalText_3.setObjectName("OriginalText_3")
         self.verticalLayout_10.addWidget(self.OriginalText_3)
-        spacerItem24 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem24)
+        spacerItem37 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem37)
         self.chooseFile_3 = QtWidgets.QPushButton(self.DeflateComp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -801,55 +1096,55 @@ class Ui_Dialog(object):
         self.chooseFile_3.setAcceptDrops(True)
         self.chooseFile_3.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.chooseFile_3.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                        "color: rgb(201, 216, 197);\n"
+                                        "background-color: rgb(70, 83, 66);\n"
+                                        "font: 75 16pt \"Inter\";\n"
+                                        "border-radius:5px;\n"
+                                        "display:inline-block;\n"
+                                        "font-weight:bold;\n"
+                                        "padding: 3px 5px;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:hover{\n"
+                                        "    background: rgb(71, 85, 67);\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:pressed{\n"
+                                        "    background: rgb(52, 62, 49);\n"
+                                        "    padding-top: 1 px;\n"
+                                        "}")
         self.chooseFile_3.setObjectName("chooseFile_3")
         self.verticalLayout_10.addWidget(self.chooseFile_3, 0, QtCore.Qt.AlignHCenter)
         self.chosenFile_3 = QtWidgets.QLabel(self.DeflateComp)
         self.chosenFile_3.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                        "border-radius:3px;\n"
+                                        "color: rgb(201, 216, 197);\n"
+                                        "font: 75 9pt \"Inter\";")
         self.chosenFile_3.setObjectName("chosenFile_3")
         self.verticalLayout_10.addWidget(self.chosenFile_3)
-        spacerItem25 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_10.addItem(spacerItem25)
+        spacerItem38 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_10.addItem(spacerItem38)
         self.pushButton_5 = QtWidgets.QPushButton(self.DeflateComp)
         self.pushButton_5.setMinimumSize(QtCore.QSize(250, 50))
         self.pushButton_5.setMaximumSize(QtCore.QSize(200, 16777215))
         self.pushButton_5.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                        "color: rgb(201, 216, 197);\n"
+                                        "background-color: rgb(70, 83, 66);\n"
+                                        "font: 75 16pt \"Inter\";\n"
+                                        "border-radius:5px;\n"
+                                        "display:inline-block;\n"
+                                        "font-weight:bold;\n"
+                                        "padding: 3px 5px;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:hover{\n"
+                                        "    background: rgb(71, 85, 67);\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:pressed{\n"
+                                        "    background: rgb(52, 62, 49);\n"
+                                        "    padding-top: 1 px;\n"
+                                        "}")
         self.pushButton_5.setObjectName("pushButton_5")
         self.verticalLayout_10.addWidget(self.pushButton_5, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_11 = QtWidgets.QVBoxLayout()
@@ -859,27 +1154,27 @@ class Ui_Dialog(object):
         self.label_33 = QtWidgets.QLabel(self.DeflateComp)
         self.label_33.setMaximumSize(QtCore.QSize(16777215, 100))
         self.label_33.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_33.setObjectName("label_33")
         self.horizontalLayout_18.addWidget(self.label_33)
-        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_18.addItem(spacerItem26)
+        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem39)
         self.compTime = QtWidgets.QTextBrowser(self.DeflateComp)
         self.compTime.setMaximumSize(QtCore.QSize(100, 20))
         self.compTime.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                    "{\n"
+                                    "color: rgb(255, 255, 255);\n"
+                                    "}\n"
+                                    "\n"
+                                    "QTextBrowser:hover\n"
+                                    "{\n"
+                                    "    border-width: 1px;\n"
+                                    "    border-style: solid;\n"
+                                    "    border-color: gray;\n"
+                                    "}\n"
+                                    "")
         self.compTime.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.compTime.setObjectName("compTime")
         self.horizontalLayout_18.addWidget(self.compTime)
@@ -888,27 +1183,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_19.setObjectName("horizontalLayout_19")
         self.label_35 = QtWidgets.QLabel(self.DeflateComp)
         self.label_35.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_35.setObjectName("label_35")
         self.horizontalLayout_19.addWidget(self.label_35)
-        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_19.addItem(spacerItem27)
+        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem40)
         self.OrigSize = QtWidgets.QTextBrowser(self.DeflateComp)
         self.OrigSize.setMaximumSize(QtCore.QSize(100, 20))
         self.OrigSize.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                    "{\n"
+                                    "color: rgb(255, 255, 255);\n"
+                                    "}\n"
+                                    "\n"
+                                    "QTextBrowser:hover\n"
+                                    "{\n"
+                                    "    border-width: 1px;\n"
+                                    "    border-style: solid;\n"
+                                    "    border-color: gray;\n"
+                                    "}\n"
+                                    "")
         self.OrigSize.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.OrigSize.setObjectName("OrigSize")
         self.horizontalLayout_19.addWidget(self.OrigSize)
@@ -917,27 +1212,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_20.setObjectName("horizontalLayout_20")
         self.label_36 = QtWidgets.QLabel(self.DeflateComp)
         self.label_36.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_36.setObjectName("label_36")
         self.horizontalLayout_20.addWidget(self.label_36)
-        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_20.addItem(spacerItem28)
+        spacerItem41 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem41)
         self.CompSize = QtWidgets.QTextBrowser(self.DeflateComp)
         self.CompSize.setMaximumSize(QtCore.QSize(100, 20))
         self.CompSize.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                    "{\n"
+                                    "color: rgb(255, 255, 255);\n"
+                                    "}\n"
+                                    "\n"
+                                    "QTextBrowser:hover\n"
+                                    "{\n"
+                                    "    border-width: 1px;\n"
+                                    "    border-style: solid;\n"
+                                    "    border-color: gray;\n"
+                                    "}\n"
+                                    "")
         self.CompSize.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompSize.setObjectName("CompSize")
         self.horizontalLayout_20.addWidget(self.CompSize)
@@ -946,27 +1241,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_21.setObjectName("horizontalLayout_21")
         self.label_37 = QtWidgets.QLabel(self.DeflateComp)
         self.label_37.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_37.setObjectName("label_37")
         self.horizontalLayout_21.addWidget(self.label_37)
-        spacerItem29 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_21.addItem(spacerItem29)
+        spacerItem42 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_21.addItem(spacerItem42)
         self.CompPerc = QtWidgets.QTextBrowser(self.DeflateComp)
         self.CompPerc.setMaximumSize(QtCore.QSize(100, 20))
         self.CompPerc.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                    "{\n"
+                                    "color: rgb(255, 255, 255);\n"
+                                    "}\n"
+                                    "\n"
+                                    "QTextBrowser:hover\n"
+                                    "{\n"
+                                    "    border-width: 1px;\n"
+                                    "    border-style: solid;\n"
+                                    "    border-color: gray;\n"
+                                    "}\n"
+                                    "")
         self.CompPerc.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPerc.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPerc.setObjectName("CompPerc")
@@ -978,8 +1273,8 @@ class Ui_Dialog(object):
         self.DeflateDecomp.setObjectName("DeflateDecomp")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.DeflateDecomp)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        spacerItem30 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem30)
+        spacerItem43 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem43)
         self.button_files_5 = QtWidgets.QPushButton(self.DeflateDecomp)
         self.button_files_5.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -991,49 +1286,49 @@ class Ui_Dialog(object):
         self.button_files_5.setMaximumSize(QtCore.QSize(300, 100))
         self.button_files_5.setSizeIncrement(QtCore.QSize(0, 0))
         self.button_files_5.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                          "color: rgb(201, 216, 197);\n"
+                                          "background-color: rgb(70, 83, 66);\n"
+                                          "font: 75 16pt \"Inter\";\n"
+                                          "border-radius:5px;\n"
+                                          "display:inline-block;\n"
+                                          "font-weight:bold;\n"
+                                          "padding: 3px 5px;\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:hover{\n"
+                                          "    background: rgb(71, 85, 67);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QPushButton:pressed{\n"
+                                          "    background: rgb(52, 62, 49);\n"
+                                          "    padding-top: 1 px;\n"
+                                          "}")
         self.button_files_5.setObjectName("button_files_5")
         self.verticalLayout_5.addWidget(self.button_files_5, 0, QtCore.Qt.AlignHCenter)
-        spacerItem31 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem31)
+        spacerItem44 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem44)
         self.label_18 = QtWidgets.QLabel(self.DeflateDecomp)
         self.label_18.setMinimumSize(QtCore.QSize(300, 0))
         self.label_18.setMaximumSize(QtCore.QSize(300, 20))
         self.label_18.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_18.setObjectName("label_18")
         self.verticalLayout_5.addWidget(self.label_18, 0, QtCore.Qt.AlignHCenter)
         self.uploaded_files_5 = QtWidgets.QLabel(self.DeflateDecomp)
         self.uploaded_files_5.setMinimumSize(QtCore.QSize(300, 30))
         self.uploaded_files_5.setMaximumSize(QtCore.QSize(300, 50))
         self.uploaded_files_5.setStyleSheet("border-color: rgb(78, 139, 119);\n"
-"color: rgb(201, 216, 197);\n"
-"border: 1px solid  rgb(78, 139, 119);\n"
-"font: 75 9pt \"Inter\";\n"
-"border-radius:3px;")
+                                            "color: rgb(201, 216, 197);\n"
+                                            "border: 1px solid  rgb(78, 139, 119);\n"
+                                            "font: 75 9pt \"Inter\";\n"
+                                            "border-radius:3px;")
         self.uploaded_files_5.setText("")
         self.uploaded_files_5.setObjectName("uploaded_files_5")
         self.verticalLayout_5.addWidget(self.uploaded_files_5, 0, QtCore.Qt.AlignHCenter)
-        spacerItem32 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem32)
+        spacerItem45 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem45)
         self.button_decompress_2 = QtWidgets.QPushButton(self.DeflateDecomp)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1043,32 +1338,32 @@ class Ui_Dialog(object):
         self.button_decompress_2.setMinimumSize(QtCore.QSize(300, 50))
         self.button_decompress_2.setMaximumSize(QtCore.QSize(300, 50))
         self.button_decompress_2.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                               "color: rgb(201, 216, 197);\n"
+                                               "background-color: rgb(70, 83, 66);\n"
+                                               "font: 75 16pt \"Inter\";\n"
+                                               "border-radius:5px;\n"
+                                               "display:inline-block;\n"
+                                               "font-weight:bold;\n"
+                                               "padding: 3px 5px;\n"
+                                               "}\n"
+                                               "\n"
+                                               "QPushButton:hover{\n"
+                                               "    background: rgb(71, 85, 67);\n"
+                                               "}\n"
+                                               "\n"
+                                               "QPushButton:pressed{\n"
+                                               "    background: rgb(52, 62, 49);\n"
+                                               "    padding-top: 1 px;\n"
+                                               "}")
         self.button_decompress_2.setObjectName("button_decompress_2")
         self.verticalLayout_5.addWidget(self.button_decompress_2, 0, QtCore.Qt.AlignHCenter)
-        spacerItem33 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_5.addItem(spacerItem33)
+        spacerItem46 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem46)
         self.status_5 = QtWidgets.QLabel(self.DeflateDecomp)
         self.status_5.setMinimumSize(QtCore.QSize(300, 30))
         self.status_5.setMaximumSize(QtCore.QSize(300, 30))
         self.status_5.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "font: 75 9pt \"Inter\";")
         self.status_5.setText("")
         self.status_5.setObjectName("status_5")
         self.verticalLayout_5.addWidget(self.status_5, 0, QtCore.Qt.AlignHCenter)
@@ -1076,37 +1371,37 @@ class Ui_Dialog(object):
         self.Brotli = QtWidgets.QWidget()
         self.Brotli.setAutoFillBackground(False)
         self.Brotli.setStyleSheet("QTabBar::tab {\n"
-"  background: gray;\n"
-"  color: white;\n"
-"  padding: 10px;\n"
-" }\n"
-"\n"
-" QTabBar::tab:selected {\n"
-"  background: lightgray;\n"
-" }")
+                                  "  background: gray;\n"
+                                  "  color: white;\n"
+                                  "  padding: 10px;\n"
+                                  " }\n"
+                                  "\n"
+                                  " QTabBar::tab:selected {\n"
+                                  "  background: lightgray;\n"
+                                  " }")
         self.Brotli.setObjectName("Brotli")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.Brotli)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
-        spacerItem34 = QtWidgets.QSpacerItem(20, 18, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_7.addItem(spacerItem34)
+        spacerItem47 = QtWidgets.QSpacerItem(20, 18, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem47)
         self.label_2 = QtWidgets.QLabel(self.Brotli)
         self.label_2.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
-        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+                                   "border-radius:3px;\n"
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
+        self.label_2.setAlignment(QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
         self.verticalLayout_7.addWidget(self.label_2)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.origTextBrotli = QtWidgets.QTextEdit(self.Brotli)
         self.origTextBrotli.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 9pt \"Inter\";")
+                                          "font: 75 9pt \"Inter\";")
         self.origTextBrotli.setObjectName("origTextBrotli")
         self.horizontalLayout_9.addWidget(self.origTextBrotli)
         self.verticalLayout_7.addLayout(self.horizontalLayout_9)
-        spacerItem35 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_7.addItem(spacerItem35)
+        spacerItem48 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem48)
         self.ChooseFileBrotli = QtWidgets.QPushButton(self.Brotli)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1118,87 +1413,87 @@ class Ui_Dialog(object):
         self.ChooseFileBrotli.setAcceptDrops(True)
         self.ChooseFileBrotli.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.ChooseFileBrotli.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                            "color: rgb(201, 216, 197);\n"
+                                            "background-color: rgb(70, 83, 66);\n"
+                                            "font: 75 16pt \"Inter\";\n"
+                                            "border-radius:5px;\n"
+                                            "display:inline-block;\n"
+                                            "font-weight:bold;\n"
+                                            "padding: 3px 5px;\n"
+                                            "}\n"
+                                            "\n"
+                                            "QPushButton:hover{\n"
+                                            "    background: rgb(71, 85, 67);\n"
+                                            "}\n"
+                                            "\n"
+                                            "QPushButton:pressed{\n"
+                                            "    background: rgb(52, 62, 49);\n"
+                                            "    padding-top: 1 px;\n"
+                                            "}")
         self.ChooseFileBrotli.setObjectName("ChooseFileBrotli")
         self.verticalLayout_7.addWidget(self.ChooseFileBrotli, 0, QtCore.Qt.AlignHCenter)
         self.ChosenFileBrotli = QtWidgets.QLabel(self.Brotli)
         self.ChosenFileBrotli.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                            "border-radius:3px;\n"
+                                            "color: rgb(201, 216, 197);\n"
+                                            "font: 75 9pt \"Inter\";")
         self.ChosenFileBrotli.setObjectName("ChosenFileBrotli")
         self.verticalLayout_7.addWidget(self.ChosenFileBrotli)
-        spacerItem36 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_7.addItem(spacerItem36)
+        spacerItem49 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem49)
         self.ButtonEnterBrotli = QtWidgets.QPushButton(self.Brotli)
         self.ButtonEnterBrotli.setMinimumSize(QtCore.QSize(250, 50))
         self.ButtonEnterBrotli.setMaximumSize(QtCore.QSize(200, 16777215))
         self.ButtonEnterBrotli.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                             "color: rgb(201, 216, 197);\n"
+                                             "background-color: rgb(70, 83, 66);\n"
+                                             "font: 75 16pt \"Inter\";\n"
+                                             "border-radius:5px;\n"
+                                             "display:inline-block;\n"
+                                             "font-weight:bold;\n"
+                                             "padding: 3px 5px;\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:hover{\n"
+                                             "    background: rgb(71, 85, 67);\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:pressed{\n"
+                                             "    background: rgb(52, 62, 49);\n"
+                                             "    padding-top: 1 px;\n"
+                                             "}")
         self.ButtonEnterBrotli.setObjectName("ButtonEnterBrotli")
         self.verticalLayout_7.addWidget(self.ButtonEnterBrotli, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_13 = QtWidgets.QVBoxLayout()
         self.verticalLayout_13.setObjectName("verticalLayout_13")
-        spacerItem37 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_13.addItem(spacerItem37)
+        spacerItem50 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_13.addItem(spacerItem50)
         self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
         self.label_42 = QtWidgets.QLabel(self.Brotli)
         self.label_42.setMaximumSize(QtCore.QSize(16777215, 100))
         self.label_42.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_42.setObjectName("label_42")
         self.horizontalLayout_26.addWidget(self.label_42)
-        spacerItem38 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_26.addItem(spacerItem38)
+        spacerItem51 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_26.addItem(spacerItem51)
         self.compTimeBrotli = QtWidgets.QTextBrowser(self.Brotli)
         self.compTimeBrotli.setMaximumSize(QtCore.QSize(100, 20))
         self.compTimeBrotli.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                          "{\n"
+                                          "color: rgb(255, 255, 255);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QTextBrowser:hover\n"
+                                          "{\n"
+                                          "    border-width: 1px;\n"
+                                          "    border-style: solid;\n"
+                                          "    border-color: gray;\n"
+                                          "}\n"
+                                          "")
         self.compTimeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.compTimeBrotli.setObjectName("compTimeBrotli")
         self.horizontalLayout_26.addWidget(self.compTimeBrotli)
@@ -1207,27 +1502,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_27.setObjectName("horizontalLayout_27")
         self.label_43 = QtWidgets.QLabel(self.Brotli)
         self.label_43.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_43.setObjectName("label_43")
         self.horizontalLayout_27.addWidget(self.label_43)
-        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_27.addItem(spacerItem39)
+        spacerItem52 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_27.addItem(spacerItem52)
         self.OrigSizeBrotli = QtWidgets.QTextBrowser(self.Brotli)
         self.OrigSizeBrotli.setMaximumSize(QtCore.QSize(100, 20))
         self.OrigSizeBrotli.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                          "{\n"
+                                          "color: rgb(255, 255, 255);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QTextBrowser:hover\n"
+                                          "{\n"
+                                          "    border-width: 1px;\n"
+                                          "    border-style: solid;\n"
+                                          "    border-color: gray;\n"
+                                          "}\n"
+                                          "")
         self.OrigSizeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.OrigSizeBrotli.setObjectName("OrigSizeBrotli")
         self.horizontalLayout_27.addWidget(self.OrigSizeBrotli)
@@ -1236,27 +1531,27 @@ class Ui_Dialog(object):
         self.horizontalLayout_28.setObjectName("horizontalLayout_28")
         self.label_44 = QtWidgets.QLabel(self.Brotli)
         self.label_44.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_44.setObjectName("label_44")
         self.horizontalLayout_28.addWidget(self.label_44)
-        spacerItem40 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_28.addItem(spacerItem40)
+        spacerItem53 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_28.addItem(spacerItem53)
         self.CompSizeBrotli = QtWidgets.QTextBrowser(self.Brotli)
         self.CompSizeBrotli.setMaximumSize(QtCore.QSize(100, 20))
         self.CompSizeBrotli.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                          "{\n"
+                                          "color: rgb(255, 255, 255);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QTextBrowser:hover\n"
+                                          "{\n"
+                                          "    border-width: 1px;\n"
+                                          "    border-style: solid;\n"
+                                          "    border-color: gray;\n"
+                                          "}\n"
+                                          "")
         self.CompSizeBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompSizeBrotli.setObjectName("CompSizeBrotli")
         self.horizontalLayout_28.addWidget(self.CompSizeBrotli)
@@ -1265,40 +1560,40 @@ class Ui_Dialog(object):
         self.horizontalLayout_29.setObjectName("horizontalLayout_29")
         self.label_45 = QtWidgets.QLabel(self.Brotli)
         self.label_45.setStyleSheet("\n"
-"border-radius:3px;\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "border-radius:3px;\n"
+                                    "color: rgb(201, 216, 197);\n"
+                                    "font: 75 9pt \"Inter\";")
         self.label_45.setObjectName("label_45")
         self.horizontalLayout_29.addWidget(self.label_45)
-        spacerItem41 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_29.addItem(spacerItem41)
+        spacerItem54 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_29.addItem(spacerItem54)
         self.CompPercBrotli = QtWidgets.QTextBrowser(self.Brotli)
         self.CompPercBrotli.setMaximumSize(QtCore.QSize(100, 20))
         self.CompPercBrotli.setStyleSheet("QTextBrowser\n"
-"{\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTextBrowser:hover\n"
-"{\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    border-color: gray;\n"
-"}\n"
-"")
+                                          "{\n"
+                                          "color: rgb(255, 255, 255);\n"
+                                          "}\n"
+                                          "\n"
+                                          "QTextBrowser:hover\n"
+                                          "{\n"
+                                          "    border-width: 1px;\n"
+                                          "    border-style: solid;\n"
+                                          "    border-color: gray;\n"
+                                          "}\n"
+                                          "")
         self.CompPercBrotli.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPercBrotli.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.CompPercBrotli.setObjectName("CompPercBrotli")
         self.horizontalLayout_29.addWidget(self.CompPercBrotli)
         self.verticalLayout_13.addLayout(self.horizontalLayout_29)
         self.verticalLayout_7.addLayout(self.verticalLayout_13)
-        spacerItem42 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_7.addItem(spacerItem42)
+        spacerItem55 = QtWidgets.QSpacerItem(20, 21, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_7.addItem(spacerItem55)
         self.status_2 = QtWidgets.QLabel(self.Brotli)
         self.status_2.setMinimumSize(QtCore.QSize(0, 30))
         self.status_2.setMaximumSize(QtCore.QSize(3000, 30))
         self.status_2.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                    "font: 75 9pt \"Inter\";")
         self.status_2.setText("")
         self.status_2.setObjectName("status_2")
         self.verticalLayout_7.addWidget(self.status_2)
@@ -1308,28 +1603,28 @@ class Ui_Dialog(object):
         self.BrotliDecomp.setObjectName("BrotliDecomp")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.BrotliDecomp)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        spacerItem43 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem43, 3, 1, 1, 1)
-        spacerItem44 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem44, 6, 1, 1, 1)
-        spacerItem45 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem45, 9, 1, 1, 1)
+        spacerItem56 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem56, 3, 1, 1, 1)
+        spacerItem57 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem57, 6, 1, 1, 1)
+        spacerItem58 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem58, 9, 1, 1, 1)
         self.uploadedFilesBrotli = QtWidgets.QLabel(self.BrotliDecomp)
         self.uploadedFilesBrotli.setMinimumSize(QtCore.QSize(0, 30))
         self.uploadedFilesBrotli.setMaximumSize(QtCore.QSize(300, 30))
         self.uploadedFilesBrotli.setStyleSheet("border-color: rgb(78, 139, 119);\n"
-"color: rgb(201, 216, 197);\n"
-"border: 1px solid  rgb(78, 139, 119);\n"
-"font: 75 9pt \"Inter\";\n"
-"border-radius:3px;")
+                                               "color: rgb(201, 216, 197);\n"
+                                               "border: 1px solid  rgb(78, 139, 119);\n"
+                                               "font: 75 9pt \"Inter\";\n"
+                                               "border-radius:3px;")
         self.uploadedFilesBrotli.setText("")
         self.uploadedFilesBrotli.setObjectName("uploadedFilesBrotli")
         self.gridLayout_4.addWidget(self.uploadedFilesBrotli, 5, 1, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.BrotliDecomp)
         self.label_5.setMaximumSize(QtCore.QSize(300, 30))
         self.label_5.setStyleSheet("\n"
-"color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                   "color: rgb(201, 216, 197);\n"
+                                   "font: 75 9pt \"Inter\";")
         self.label_5.setObjectName("label_5")
         self.gridLayout_4.addWidget(self.label_5, 4, 1, 1, 1)
         self.buttonDecompBrotli = QtWidgets.QPushButton(self.BrotliDecomp)
@@ -1341,30 +1636,30 @@ class Ui_Dialog(object):
         self.buttonDecompBrotli.setMinimumSize(QtCore.QSize(0, 50))
         self.buttonDecompBrotli.setMaximumSize(QtCore.QSize(300, 50))
         self.buttonDecompBrotli.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                              "color: rgb(201, 216, 197);\n"
+                                              "background-color: rgb(70, 83, 66);\n"
+                                              "font: 75 16pt \"Inter\";\n"
+                                              "border-radius:5px;\n"
+                                              "display:inline-block;\n"
+                                              "font-weight:bold;\n"
+                                              "padding: 3px 5px;\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:hover{\n"
+                                              "    background: rgb(71, 85, 67);\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:pressed{\n"
+                                              "    background: rgb(52, 62, 49);\n"
+                                              "    padding-top: 1 px;\n"
+                                              "}")
         self.buttonDecompBrotli.setObjectName("buttonDecompBrotli")
         self.gridLayout_4.addWidget(self.buttonDecompBrotli, 8, 1, 1, 1)
         self.statusBrotli = QtWidgets.QLabel(self.BrotliDecomp)
         self.statusBrotli.setMinimumSize(QtCore.QSize(300, 30))
         self.statusBrotli.setMaximumSize(QtCore.QSize(300, 30))
         self.statusBrotli.setStyleSheet("color: rgb(201, 216, 197);\n"
-"font: 75 9pt \"Inter\";")
+                                        "font: 75 9pt \"Inter\";")
         self.statusBrotli.setText("")
         self.statusBrotli.setObjectName("statusBrotli")
         self.gridLayout_4.addWidget(self.statusBrotli, 10, 1, 1, 1)
@@ -1374,42 +1669,41 @@ class Ui_Dialog(object):
         self.ChooseFilesBrotli.setMaximumSize(QtCore.QSize(300, 100))
         self.ChooseFilesBrotli.setSizeIncrement(QtCore.QSize(0, 0))
         self.ChooseFilesBrotli.setStyleSheet("QPushButton {\n"
-"color: rgb(201, 216, 197);\n"
-"background-color: rgb(70, 83, 66);\n"
-"font: 75 16pt \"Inter\";\n"
-"border-radius:5px;\n"
-"display:inline-block;\n"
-"font-weight:bold;\n"
-"padding: 3px 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background: rgb(71, 85, 67);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background: rgb(52, 62, 49);\n"
-"    padding-top: 1 px;\n"
-"}")
+                                             "color: rgb(201, 216, 197);\n"
+                                             "background-color: rgb(70, 83, 66);\n"
+                                             "font: 75 16pt \"Inter\";\n"
+                                             "border-radius:5px;\n"
+                                             "display:inline-block;\n"
+                                             "font-weight:bold;\n"
+                                             "padding: 3px 5px;\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:hover{\n"
+                                             "    background: rgb(71, 85, 67);\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:pressed{\n"
+                                             "    background: rgb(52, 62, 49);\n"
+                                             "    padding-top: 1 px;\n"
+                                             "}")
         self.ChooseFilesBrotli.setObjectName("ChooseFilesBrotli")
         self.gridLayout_4.addWidget(self.ChooseFilesBrotli, 2, 1, 1, 1)
-        spacerItem46 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem46, 0, 1, 1, 1)
-        spacerItem47 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem47, 5, 0, 1, 1)
-        spacerItem48 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem48, 5, 2, 1, 1)
+        spacerItem59 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem59, 0, 1, 1, 1)
+        spacerItem60 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem60, 5, 0, 1, 1)
+        spacerItem61 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem61, 5, 2, 1, 1)
         self.tabWidget.addTab(self.BrotliDecomp, "")
-        self.gridLayout_2.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.tabWidget, 0, 1, 1, 1)
 
         self.retranslateUi(Dialog)
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.tabWidget.setToolTip(_translate("Dialog", "<html><head/><body><p><br/></p></body></html>"))
         self.HuffmanComp.setWhatsThis(_translate("Dialog", "<html><head/><body><p><br/></p></body></html>"))
         self.label.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
         self.chooseFile.setText(_translate("Dialog", "Выберите файл"))
@@ -1424,9 +1718,9 @@ class Ui_Dialog(object):
         self.label_4.setText(_translate("Dialog", "Выбранный файл:"))
         self.button_files_4.setText(_translate("Dialog", "Выбрать файл"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Huffman декомпрессия"))
-        self.label_7.setText(_translate("Dialog", "Введите текст:"))
+        self.label_7.setText(_translate("Dialog", "Введите текст для сжатия:"))
         self.label_8.setText(_translate("Dialog", "Параметры"))
-        self.label_6.setText(_translate("Dialog", "Размер скользящего окна:"))
+        self.label_6.setText(_translate("Dialog", "Размер словаря:"))
         self.label_9.setText(_translate("Dialog", "Буфер"))
         self.pushButton.setText(_translate("Dialog", "Ввод"))
         self.label_13.setText(_translate("Dialog", "Время выполнения сжатия:"))
@@ -1434,12 +1728,24 @@ class Ui_Dialog(object):
         self.label_10.setText(_translate("Dialog", "Размер сжатого текста:"))
         self.label_12.setText(_translate("Dialog", "Процент сжатия: "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("Dialog", "LZ77"))
+        self.label_25.setText(_translate("Dialog", "Выберите файл для сжатия:"))
+        self.ChooseFileLZ77.setText(_translate("Dialog", "Выбрать файл"))
+        self.label_3.setText(_translate("Dialog", "Параметры"))
+        self.label_23.setText(_translate("Dialog", "Размер словаря:"))
+        self.label_24.setText(_translate("Dialog", "Буфер"))
+        self.ButtonLZ77.setText(_translate("Dialog", "Ввод"))
+        self.label_19.setText(_translate("Dialog", "Время выполнения сжатия:"))
+        self.label_20.setText(_translate("Dialog", "Размер изначального текста:"))
+        self.label_21.setText(_translate("Dialog", "Размер сжатого текста:"))
+        self.label_22.setText(_translate("Dialog", "Процент сжатия: "))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "LZ77 файл"))
         self.label_14.setText(_translate("Dialog", "Введите закодированную последовательность:"))
         self.pushButton_2.setText(_translate("Dialog", "Ввод"))
         self.label_17.setText(_translate("Dialog", "Время выполнения декомпрессии:"))
         self.label_16.setText(_translate("Dialog", "Размер входных данных:"))
         self.label_15.setText(_translate("Dialog", "Размер оригинального текста:"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.lz77decompression), _translate("Dialog", "LZ77 декомпрессия"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.lz77decompression),
+                                  _translate("Dialog", "LZ77 декомпрессия"))
         self.label_34.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
         self.chooseFile_3.setText(_translate("Dialog", "Выберите файл"))
         self.chosenFile_3.setText(_translate("Dialog", "Выбранный файл:"))
@@ -1452,7 +1758,8 @@ class Ui_Dialog(object):
         self.button_files_5.setText(_translate("Dialog", "Выбрать файл"))
         self.label_18.setText(_translate("Dialog", "Выбранный файл:"))
         self.button_decompress_2.setText(_translate("Dialog", "Ввод"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.DeflateDecomp), _translate("Dialog", "Deflate декомпрессия"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.DeflateDecomp),
+                                  _translate("Dialog", "Deflate декомпрессия"))
         self.label_2.setText(_translate("Dialog", "Введите текст или выберите файл для сжатия:"))
         self.ChooseFileBrotli.setText(_translate("Dialog", "Выберите файл"))
         self.ChosenFileBrotli.setText(_translate("Dialog", "Выбранный файл:"))
@@ -1461,15 +1768,17 @@ class Ui_Dialog(object):
         self.label_43.setText(_translate("Dialog", "Размер изначального текста:"))
         self.label_44.setText(_translate("Dialog", "Размер сжатого текста:"))
         self.label_45.setText(_translate("Dialog", "Процент сжатия: "))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Brotli), _translate("Dialog", "Brotli компрессия"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Brotli), _translate("Dialog", "Brotli"))
         self.label_5.setText(_translate("Dialog", "Выбранный файл:"))
         self.buttonDecompBrotli.setText(_translate("Dialog", "Ввод"))
         self.ChooseFilesBrotli.setText(_translate("Dialog", "Выбрать файл"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BrotliDecomp), _translate("Dialog", "Brotli декомпрессия"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.BrotliDecomp),
+                                  _translate("Dialog", "Brotli декомпрессия"))
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()

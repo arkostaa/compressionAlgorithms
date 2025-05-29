@@ -1,7 +1,7 @@
 import zipfile
 import os
 import sys
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 from design import Ui_Dialog
 from huffman_coding import compress as huffman_compress, decompress as huffman_decompress
@@ -9,6 +9,27 @@ from lz77 import lz77_compress, lz77_decompress_from_sequence
 from deflate import deflate_compress, deflate_decompress
 from BrotliComp import brotli_compress, brotli_decompress
 import time
+
+
+class CustomTextEdit(QtWidgets.QTextEdit):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        # Устанавливаем начальный стиль текста
+        self.setStyleSheet("color: rgb(255, 255, 255); font: 75 9pt \"Inter\";")
+
+    def insertFromMimeData(self, source):
+        # Перехватываем вставку текста
+        if source.hasText():
+            text = source.text()
+            # Создаём текстовый формат
+            fmt = QtGui.QTextCharFormat()
+            fmt.setForeground(QtGui.QColor(255, 255, 255))  # Белый цвет
+            fmt.setFont(QtGui.QFont("Inter", 9))  # Шрифт Inter, 9pt
+            # Вставляем текст с заданным форматом
+            cursor = self.textCursor()
+            cursor.insertText(text, fmt)
+        else:
+            super().insertFromMimeData(source)
 
 
 class MainWindow(QtWidgets.QDialog):
@@ -21,8 +42,56 @@ class MainWindow(QtWidgets.QDialog):
         self.selected_file_for_deflate_decompress = None
         self.selected_file_for_brotli = None
         self.selected_file_for_brotli_decompress = None
+        self.selected_file_for_lz77 = None
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+
+        # Replace origHuffmanText with CustomTextEdit (as in original code)
+        self.ui.origHuffmanText.deleteLater()
+        self.ui.origHuffmanText = CustomTextEdit(self.ui.HuffmanComp)
+        self.ui.origHuffmanText.setObjectName("origHuffmanText")
+        self.ui.horizontalLayout_8.addWidget(self.ui.origHuffmanText)
+        self.ui.origHuffmanText.setStyleSheet(
+            "color: rgb(255, 255, 255); font: 75 9pt \"Inter\";"
+        )
+
+        # Replace OriginalText with CustomTextEdit (LZ77 tab)
+        self.ui.OriginalText.deleteLater()
+        self.ui.OriginalText = CustomTextEdit(self.ui.tab_4)
+        self.ui.OriginalText.setObjectName("OriginalText")
+        self.ui.verticalLayout.insertWidget(1, self.ui.OriginalText)  # Insert at correct position
+        self.ui.OriginalText.setStyleSheet(
+            "color: rgb(255, 255, 255); font: 75 9pt \"Inter\";"
+        )
+        self.ui.OriginalText.setMaximumSize(QtCore.QSize(16777215, 500))
+
+        # Replace compressedText with CustomTextEdit (LZ77 decompression tab)
+        self.ui.compressedText.deleteLater()
+        self.ui.compressedText = CustomTextEdit(self.ui.lz77decompression)
+        self.ui.compressedText.setObjectName("compressedText")
+        self.ui.verticalLayout_3.insertWidget(1, self.ui.compressedText)  # Insert at correct position
+        self.ui.compressedText.setStyleSheet(
+            "color: rgb(255, 255, 255); font: 75 9pt \"Inter\";"
+        )
+
+        # Replace OriginalText_3 with CustomTextEdit (Deflate tab)
+        self.ui.OriginalText_3.deleteLater()
+        self.ui.OriginalText_3 = CustomTextEdit(self.ui.DeflateComp)
+        self.ui.OriginalText_3.setObjectName("OriginalText_3")
+        self.ui.verticalLayout_10.insertWidget(2, self.ui.OriginalText_3)  # Insert at correct position
+        self.ui.OriginalText_3.setStyleSheet(
+            "color: rgb(255, 255, 255); font: 75 9pt \"Inter\";"
+        )
+        self.ui.OriginalText_3.setMaximumSize(QtCore.QSize(16777215, 300))
+
+        # Replace origTextBrotli with CustomTextEdit (Brotli tab)
+        self.ui.origTextBrotli.deleteLater()
+        self.ui.origTextBrotli = CustomTextEdit(self.ui.Brotli)
+        self.ui.origTextBrotli.setObjectName("origTextBrotli")
+        self.ui.horizontalLayout_9.addWidget(self.ui.origTextBrotli)
+        self.ui.origTextBrotli.setStyleSheet(
+            "color: rgb(255, 255, 255); font: 75 9pt \"Inter\";"
+        )
 
         self.setWindowFlags(
             QtCore.Qt.WindowMinimizeButtonHint |
@@ -52,6 +121,9 @@ class MainWindow(QtWidgets.QDialog):
 
         self.ui.ChooseFilesBrotli.clicked.connect(self.select_file_for_brotli_decompress)
         self.ui.buttonDecompBrotli.clicked.connect(self.decompress_with_brotli)
+
+        self.ui.ChooseFileLZ77.clicked.connect(self.select_file_for_lz77)
+        self.ui.ButtonLZ77.clicked.connect(self.compress_file_with_lz77)
 
     def show_error_message(self, title, text, icon):
         """Вспомогательная функция для отображения стилизованных сообщений об ошибках."""
@@ -242,6 +314,47 @@ class MainWindow(QtWidgets.QDialog):
 
         except Exception as e:
             self.show_error_message("Ошибка", f"Ошибка при декомпрессии LZ77: {str(e)}", QMessageBox.Critical)
+
+    def select_file_for_lz77(self):
+        file, _ = QFileDialog.getOpenFileName(self, "Выберите файл для сжатия", "", "Текстовые файлы (*.txt)")
+        if file:
+            self.ui.label_25.setText(os.path.basename(file))
+            self.selected_file_for_lz77 = file
+            self.ui.status_2.setText("Файл выбран")
+        else:
+            self.ui.label_25.setText("Выберите файл для сжатия:")
+            self.ui.status_2.setText("Файл не выбран")
+
+    def compress_file_with_lz77(self):
+        if not hasattr(self, 'selected_file_for_lz77') or not self.selected_file_for_lz77:
+            self.show_error_message("Ошибка", "Сначала выберите файл!", QMessageBox.Warning)
+            return
+
+        output_file, _ = QFileDialog.getSaveFileName(self, "Сохранить сжатый файл", "", "LZ77 Compressed (*.lz77)")
+        if not output_file:
+            return
+
+        try:
+            with open(self.selected_file_for_lz77, 'r', encoding='utf-8') as f:
+                text = f.read()
+
+            window_size = self.ui.WindowSize_File.value()
+            buffer_size = self.ui.BufferSize_File.value()
+
+            result = lz77_compress(text, window_size, buffer_size)
+
+            with open(output_file, 'wb') as f:
+                f.write(result['compressed_bytes'])
+
+            self.ui.CompressionTime_File.setPlainText(f"{result['compression_time']:.2f} мс")
+            self.ui.originalTextSize_File.setPlainText(f"{result['original_size']} байт")
+            self.ui.compressedTextSize_File.setPlainText(f"{result['compressed_size']} байт")
+            self.ui.CompressionPercentage_File.setPlainText(f"{result['compression_ratio']:.2f}%")
+
+            self.ui.status_2.setText(f"Файл сжат: {os.path.basename(output_file)}")
+
+        except Exception as e:
+            self.show_error_message("Ошибка", f"Ошибка при сжатии LZ77: {str(e)}", QMessageBox.Critical)
 
     # ========== Deflate функционал ==========
     def select_file_for_deflate(self):

@@ -17,7 +17,6 @@ def deflate_compress(text):
         compression_time = (time.time() - start_time) * 1000
 
         compressed_size = len(compressed_data)
-        # Исправленная формула для процента сжатия
         compression_ratio = ((original_size - compressed_size) / original_size * 100) if original_size > 0 else 0
 
         return {
