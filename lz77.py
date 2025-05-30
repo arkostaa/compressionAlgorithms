@@ -97,11 +97,11 @@ def lz77_compress(text, window_size, buffer_size):
         'compressed_bytes': compressed_bytes,
         'encoded_sequence': " ".join(encoded_sequence),
         'original_size': original_size,
-        'compressed_size': approx_label_bytes,  # Округлённый теоретический размер
-        'compression_ratio': compression_ratio,  # В процентах, округлённо
-        'compression_time': compression_time,    # В миллисекундах, округлённо
+        'compressed_size': approx_label_bytes,
+        'compression_ratio': compression_ratio,
+        'compression_time': compression_time,
         'num_triples': num_triples,
-        'approx_label_bits': approx_label_bits   # Можно тоже округлить, но тут он и так целый
+        'approx_label_bits': approx_label_bits
     }
 
 def lz77_decompress(compressed_bytes, window_size, buffer_size):
@@ -180,9 +180,15 @@ def lz77_decompress(compressed_bytes, window_size, buffer_size):
         'decompressed_size': decompressed_size
     }
 
-
 def lz77_decompress_from_sequence(sequence: str, window_size: int, buffer_size: int):
-    import time
+    """
+    Декомпрессирует данные из читаемой последовательности троек LZ77.
+    Аргументы:
+        sequence: строка вида '(offset,length,symbol) ...'
+        window_size: размер окна поиска
+        buffer_size: размер буфера предпросмотра
+    Возвращает: словарь с восстановленным текстом и статистикой.
+    """
     start_time = time.time()
 
     pattern = r'\((\d+),(\d+),([^\)]*)\)'
@@ -190,6 +196,9 @@ def lz77_decompress_from_sequence(sequence: str, window_size: int, buffer_size: 
 
     if not matches:
         raise ValueError("Формат последовательности некорректен")
+
+    offset_bits_count = math.ceil(math.log2(window_size)) if window_size > 0 else 1
+    length_bits_count = math.ceil(math.log2(buffer_size + 1)) if buffer_size > 0 else 1
 
     result = ''
     for offset, length, symbol in matches:
@@ -201,14 +210,27 @@ def lz77_decompress_from_sequence(sequence: str, window_size: int, buffer_size: 
 
         start = len(result) - offset
         for _ in range(length):
-            result += result[start]
-            start += 1
+            if start < len(result):  # Проверка на выход за пределы
+                result += result[start]
+                start += 1
+            else:
+                break
 
         result += symbol
+
+    # Вычисляем compressed_size, как в lz77_compress
+    num_triples = len(matches)
+    approx_label_bits = num_triples * (offset_bits_count + length_bits_count + 8)
+    compressed_size = len(bits_to_bytes([0] * approx_label_bits))  # Реальный размер после padding
+
+    # Отладочный вывод для проверки
+    print(f"Debug: num_triples={num_triples}, offset_bits_count={offset_bits_count}, "
+          f"length_bits_count={length_bits_count}, approx_label_bits={approx_label_bits}, "
+          f"compressed_size={compressed_size}")
 
     return {
         'decompressed_text': result,
         'decompression_time': (time.time() - start_time) * 1000,
-        'compressed_size': len(sequence.encode('utf-8')),
+        'compressed_size': compressed_size,  # Теперь совпадает с lz77_compress
         'decompressed_size': len(result.encode('utf-8')),
     }
